@@ -9,32 +9,83 @@ permissions:
   contents: write
 
 jobs:
+
   update:
+
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout website
+
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Check website
+      - name: Check Maha Shiv Website
         run: |
-          echo "Maha Shiv hourly check started"
-          echo "Date: $(date -u)"
-
-      - name: Check live website
-        run: |
-          curl -I --max-time 30 \
+          curl -L \
+          --max-time 30 \
+          -o /dev/null \
+          -s \
+          -w "Maha Shiv: %{http_code}\n" \
           https://phupateshankar143-alt.github.io/mahashiv-/
 
-      - name: Commit changes if any
+      - name: Check Official Sources
         run: |
+
+          urls=(
+            "https://mpsc.gov.in/"
+            "https://upsc.gov.in/"
+            "https://ssc.gov.in/"
+            "https://www.ibps.in/"
+            "https://www.rrbapply.gov.in/"
+            "https://mahresult.nic.in/"
+            "https://www.mahapolice.gov.in/"
+            "https://education.maharashtra.gov.in/"
+            "https://www.mahatet.in/"
+            "https://ctet.nic.in/"
+            "https://mahadbt.maharashtra.gov.in/"
+            "https://cetcell.mahacet.org/"
+            "https://maharashtra.gov.in/"
+            "https://gr.maharashtra.gov.in/"
+          )
+
+          for url in "${urls[@]}"
+          do
+            echo "Checking: $url"
+
+            curl -L \
+            --max-time 30 \
+            -o /dev/null \
+            -s \
+            -w "HTTP %{http_code}\n" \
+            "$url" || true
+
+          done
+
+      - name: Save update time
+        run: |
+
+          cat > last-update.txt <<EOF
+          Maha Shiv automatic check
+
+          Last check:
+          $(date -u +"%Y-%m-%d %H:%M:%S UTC")
+
+          All official source checks completed.
+          EOF
+
+      - name: Commit
+        run: |
+
           git config user.name "Maha Shiv Bot"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add .
+          git config user.email \
+          "github-actions[bot]@users.noreply.github.com"
 
-          if git diff --cached --quiet; then
-            echo "No changes found."
+          git add last-update.txt
+
+          if git diff --cached --quiet
+          then
+            echo "No changes"
           else
             git commit -m "Hourly Maha Shiv update"
             git push
