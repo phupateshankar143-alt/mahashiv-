@@ -4,15 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Maha Shiv | Education Jobs Results Updates</title>
-
-<meta name="description"
-content="Maha Shiv - सरकारी नोकरी, निकाल, Admit Card, पोलीस भरती, शालेय शिक्षण, शिक्षक, MahaDBT, महाविद्यालय, Latest Updates आणि सरकारी GR">
-
-<meta name="robots" content="index, follow">
+<title>Maha Shiv</title>
 
 <style>
-
 *{
   box-sizing:border-box;
 }
@@ -20,1321 +14,813 @@ content="Maha Shiv - सरकारी नोकरी, निकाल, Admit 
 body{
   margin:0;
   font-family:Arial,"Noto Sans Devanagari",sans-serif;
-  background:#eef4ff;
-  color:#222;
+  background:#f3f6fb;
 }
 
+/* HEADER */
 header{
-  background:linear-gradient(135deg,#003b88,#008bd2);
-  color:#fff;
+  background:linear-gradient(135deg,#102a72,#2563eb,#7c3aed);
+  color:white;
   text-align:center;
-  padding:16px 8px;
+  padding:18px 10px;
 }
 
 header h1{
   margin:0;
   font-size:30px;
-  font-weight:900;
-  animation:shine 1.5s infinite alternate;
+  text-shadow:0 0 12px white;
 }
 
 header p{
   margin:5px 0 0;
-  font-weight:bold;
-  font-size:14px;
 }
 
-@keyframes shine{
-  from{
-    text-shadow:0 0 4px #fff;
-  }
-  to{
-    text-shadow:
-      0 0 8px #fff,
-      0 0 18px #00ffff,
-      0 0 28px #00ffff;
-  }
+/* RUNNING */
+.running{
+  display:flex;
+  height:42px;
+  background:#111827;
+  color:white;
+  overflow:hidden;
 }
 
-.container{
-  max-width:760px;
-  margin:auto;
-  padding:10px;
-}
-
-.welcome{
-  background:#fff;
-  border-radius:14px;
+.running-title{
+  background:#dc2626;
   padding:12px;
-  text-align:center;
-  margin-bottom:10px;
-  box-shadow:0 3px 12px #bbb;
+  font-weight:bold;
+  white-space:nowrap;
 }
 
-.welcome h2{
-  margin:0;
-  font-size:20px;
-  font-weight:900;
+.running-text{
+  padding:11px 20px;
+  white-space:nowrap;
+  animation:run 22s linear infinite;
+}
+
+@keyframes run{
+  from{transform:translateX(100%);}
+  to{transform:translateX(-100%);}
 }
 
 /* MAIN FOLDERS */
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:15px;
+}
 
-.main-grid{
+.folder-grid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:8px;
+  gap:12px;
 }
 
-.main-folder{
-  min-height:58px;
-  border-radius:12px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+.folder{
+  padding:20px 8px;
+  border-radius:15px;
+  color:white;
   text-align:center;
-  border:2px solid #fff;
+  font-size:17px;
+  font-weight:bold;
   cursor:pointer;
-  box-shadow:0 3px 10px rgba(0,0,0,.22);
-  transition:.25s;
+  box-shadow:0 5px 12px #aaa;
+  transition:.3s;
 }
 
-.main-folder:hover{
-  transform:scale(1.03);
+.folder:hover{
+  transform:translateY(-4px);
+  box-shadow:0 8px 18px #777;
 }
 
-.main-folder span{
-  font-size:14px;
-  font-weight:900;
-  animation:folderGlow 1.6s infinite alternate;
-}
+.f1{background:#2563eb;}
+.f2{background:#16a34a;}
+.f3{background:#9333ea;}
+.f4{background:#ea580c;}
+.f5{background:#dc2626;}
+.f6{background:#0891b2;}
+.f7{background:#7c3aed;}
+.f8{background:#059669;}
+.f9{background:#ca8a04;}
+.f10{background:#db2777;}
 
-@keyframes folderGlow{
-  from{
-    text-shadow:0 0 3px #fff;
-  }
-  to{
-    text-shadow:0 0 7px currentColor,
-                0 0 15px currentColor;
-  }
-}
-
-.c1{background:#ffe0a5;color:#a94b00}
-.c2{background:#bcdcff;color:#0750a5}
-.c3{background:#dfc5ff;color:#6b159c}
-.c4{background:#ffc3c3;color:#a90000}
-.c5{background:#bff2d0;color:#08733b}
-.c6{background:#b9efff;color:#006c96}
-.c7{background:#ffe98c;color:#765500}
-.c8{background:#dfc4ff;color:#70159a}
-.c9{background:#ffca98;color:#a84a00}
-.c10{background:#dce1e5;color:#263238}
-
-/* MAIN CONTENT */
-
-.main-content{
+/* PANELS */
+.panel{
   display:none;
-  background:#fff;
-  border-radius:14px;
-  padding:10px;
-  margin-top:10px;
-  box-shadow:0 3px 12px #bbb;
+  margin-top:15px;
+  background:white;
+  padding:18px;
+  border-radius:15px;
+  box-shadow:0 3px 12px #ccc;
 }
 
-.main-content.active{
+.panel.active{
   display:block;
 }
 
-.main-title{
-  text-align:center;
+.panel h2{
+  color:#1d4ed8;
+}
+
+/* SUB FOLDERS */
+.subfolders{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.subfolder{
+  display:block;
+  padding:13px;
+  background:#eef2ff;
+  border-left:5px solid #4f46e5;
+  border-radius:8px;
+  font-weight:bold;
+  color:#172033;
+  text-decoration:none;
+}
+
+.subfolder:hover{
+  background:#dbeafe;
+}
+
+/* UPDATE */
+.update{
+  margin-top:15px;
+  padding:15px;
+  background:#f8fafc;
+  border-radius:12px;
+  border:1px solid #dbeafe;
+}
+
+.headline{
   font-size:21px;
-  font-weight:900;
-  margin:4px 0 12px;
+  font-weight:bold;
+  color:#b91c1c;
 }
 
-/* SUB MAIN */
-
-.sub-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:7px;
+.new{
+  background:red;
+  color:white;
+  padding:4px 8px;
+  border-radius:15px;
+  font-size:11px;
+  animation:blink 1s infinite;
 }
 
-.sub-folder{
-  background:linear-gradient(135deg,#f5f8ff,#dfeaff);
-  border:1px solid #9dbbe5;
-  border-radius:9px;
-  padding:10px 5px;
-  text-align:center;
-  font-weight:900;
-  color:#064da3;
-  cursor:pointer;
-  transition:.2s;
-}
-
-.sub-folder:hover{
-  background:#d4e5ff;
-  transform:scale(1.02);
-}
-
-/* SUB CONTENT */
-
-.sub-content{
-  display:none;
-  margin-top:10px;
-  padding:10px;
-  border-radius:12px;
-  background:#f8fbff;
-  border:1px solid #cbdcf4;
-}
-
-.sub-content.active{
-  display:block;
-}
-
-.sub-content h3{
-  text-align:center;
-  margin:4px 0 10px;
-  color:#064da3;
-}
-
-/* INFORMATION CARD */
-
-.info-card{
-  background:#fff;
-  border-left:5px solid #0a9145;
-  border-radius:9px;
-  padding:10px;
-  margin:8px 0;
-  box-shadow:0 2px 7px #ddd;
-}
-
-.post{
-  font-size:16px;
-  font-weight:900;
-  color:#064da3;
+@keyframes blink{
+  50%{opacity:.3;}
 }
 
 .date{
+  margin:7px 0;
   font-weight:bold;
-  margin-top:4px;
 }
-
-.start{
-  color:#08733b;
-}
-
-.end{
-  color:#c00000;
-}
-
-/* DIRECT BUTTONS */
 
 .direct{
-  display:block;
+  display:inline-block;
+  margin-top:8px;
+  padding:10px 15px;
+  background:#16a34a;
+  color:white;
   text-decoration:none;
-  text-align:center;
-  font-weight:900;
-  padding:9px;
-  margin-top:7px;
   border-radius:8px;
-}
-
-.notice{
-  background:#fff0d4;
-  color:#9b5300;
-}
-
-.form{
-  background:#d1f6dd;
-  color:#08733b;
-}
-
-.admit{
-  background:#ffe3bd;
-  color:#a45500;
-}
-
-.result{
-  background:#dceaff;
-  color:#064da3;
-}
-
-.merit{
-  background:#eadcff;
-  color:#6b159c;
-}
-
-.other{
-  background:#eeeeee;
-  color:#444;
-}
-
-/* EXPIRED */
-
-.expired-title{
-  margin-top:15px;
-  padding:9px;
-  border-radius:8px;
-  text-align:center;
-  font-weight:900;
-  color:#666;
-  background:#e8e8e8;
+  font-weight:bold;
 }
 
 /* CONTACT */
-
 .contact{
-  margin-top:12px;
-  background:#fff;
-  border-radius:14px;
-  padding:14px;
+  margin-top:20px;
+  background:#111827;
+  color:white;
   text-align:center;
-  box-shadow:0 3px 10px #bbb;
+  padding:22px;
+  border-radius:15px;
 }
 
-.contact a{
-  display:block;
-  text-decoration:none;
-  margin:7px;
-  font-weight:bold;
-}
+/* MOBILE */
+@media(max-width:600px){
 
-footer{
-  text-align:center;
-  padding:18px;
-  font-weight:bold;
-  font-size:13px;
-}
-
-@media(max-width:500px){
-
-  .main-grid,
-  .sub-grid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .main-folder span{
-    font-size:13px;
+  .folder{
+    font-size:14px;
+    padding:16px 5px;
   }
 
   header h1{
-    font-size:27px;
+    font-size:24px;
+  }
+
+  .subfolders{
+    grid-template-columns:1fr;
   }
 }
-
 </style>
 </head>
 
 <body>
 
 <header>
-  <h1>🌟 Maha Shiv</h1>
-  <p>Education • Jobs • Results • Latest Updates</p>
+<h1>🌟 Maha Shiv</h1>
+<p>Education • Jobs • Results • Latest Updates</p>
 </header>
+
+<!-- RUNNING HEADLINE -->
+<div class="running">
+<div class="running-title">🔴 नवीन अपडेट</div>
+
+<div class="running-text">
+🆕 नवीन सरकारी नोकरी • 🆕 नवीन निकाल • 🆕 Admit Card •
+🆕 शिक्षक भरती • 🆕 MahaDBT • 🆕 सरकारी GR • 🆕 जिल्हा परिषद
+</div>
+</div>
+
 
 <div class="container">
 
-<div class="welcome">
-  <h2>Welcome to Maha Shiv</h2>
-  <p>शिक्षण • सरकारी नोकरी • निकाल • नवीन अपडेट्स</p>
-</div>
-
-<!-- ========================= -->
-<!-- 10 MAIN FOLDERS -->
-<!-- ========================= -->
+<!-- ================= MAIN FOLDERS ================= -->
 
-<div class="main-grid">
+<div class="folder-grid">
 
-<div class="main-folder c1" onclick="openMain('job')">
-<span>💼 सरकारी नोकरी</span>
+<div class="folder f1" onclick="openFolder('job')">
+🏛️ सरकारी नोकरी
 </div>
 
-<div class="main-folder c2" onclick="openMain('result')">
-<span>📝 निकाल</span>
+<div class="folder f2" onclick="openFolder('result')">
+📋 निकाल
 </div>
 
-<div class="main-folder c3" onclick="openMain('admit')">
-<span>🎫 Admit Card</span>
+<div class="folder f3" onclick="openFolder('admit')">
+🎫 Admit Card
 </div>
 
-<div class="main-folder c4" onclick="openMain('police')">
-<span>👮 पोलीस भरती</span>
+<div class="folder f4" onclick="openFolder('school')">
+📚 शालेय शिक्षण
 </div>
 
-<div class="main-folder c5" onclick="openMain('school')">
-<span>🏫 शालेय शिक्षण</span>
+<div class="folder f5" onclick="openFolder('police')">
+👮 पोलीस भरती
 </div>
 
-<div class="main-folder c6" onclick="openMain('teacher')">
-<span>👨‍🏫 शिक्षक</span>
+<div class="folder f6" onclick="openFolder('teacher')">
+👨‍🏫 शिक्षक भरती
 </div>
 
-<div class="main-folder c7" onclick="openMain('dbt')">
-<span>🎓 MahaDBT</span>
+<div class="folder f7" onclick="openFolder('college')">
+🎓 महाविद्यालय
 </div>
 
-<div class="main-folder c8" onclick="openMain('college')">
-<span>🎓 महाविद्यालय</span>
+<div class="folder f8" onclick="openFolder('dbt')">
+💻 MahaDBT
 </div>
 
-<div class="main-folder c9" onclick="openMain('updates')">
-<span>📢 Latest Updates</span>
+<div class="folder f9" onclick="openFolder('gr')">
+📜 सरकारी GR
 </div>
 
-<div class="main-folder c10" onclick="openMain('gr')">
-<span>📜 सरकारी GR</span>
+<div class="folder f10" onclick="openFolder('zp')">
+🏢 जिल्हा परिषद
 </div>
 
 </div>
 
 
-<!-- ================================================= -->
-<!-- 1 सरकारी नोकरी -->
-<!-- ================================================= -->
+<!-- ================= सरकारी नोकरी ================= -->
 
-<div id="job" class="main-content">
+<div id="job" class="panel">
 
-<div class="main-title">💼 सरकारी नोकरी</div>
+<h2>🏛️ सरकारी नोकरी</h2>
 
-<div class="sub-grid">
+<div class="subfolders">
 
-<div class="sub-folder" onclick="openSub('job-maha')">
-महाराष्ट्र सरकार
-</div>
+<a class="subfolder"
+href="https://www.upsc.gov.in/recruitment/recruitment-advertisement"
+target="_blank">UPSC</a>
 
-<div class="sub-folder" onclick="openSub('job-central')">
-केंद्र सरकार
-</div>
+<a class="subfolder"
+href="https://ssc.gov.in/"
+target="_blank">SSC</a>
 
-<div class="sub-folder" onclick="openSub('job-mpsc')">
-MPSC
-</div>
+<a class="subfolder"
+href="https://www.rrbapply.gov.in/"
+target="_blank">Railway / RRB</a>
 
-<div class="sub-folder" onclick="openSub('job-upsc')">
-UPSC
-</div>
+<a class="subfolder"
+href="https://ibps.in/"
+target="_blank">Banking / IBPS</a>
 
-<div class="sub-folder" onclick="openSub('job-ssc')">
-SSC
-</div>
+<a class="subfolder"
+href="https://sbi.co.in/web/careers"
+target="_blank">SBI Careers</a>
 
-<div class="sub-folder" onclick="openSub('job-railway')">
-Railway
-</div>
+<a class="subfolder"
+href="https://www.joinindianarmy.nic.in/"
+target="_blank">Army</a>
 
-<div class="sub-folder" onclick="openSub('job-banking')">
-Banking
-</div>
+<a class="subfolder"
+href="https://www.joinindiannavy.gov.in/"
+target="_blank">Navy</a>
 
-<div class="sub-folder" onclick="openSub('job-other')">
-इतर भरती
-</div>
+<a class="subfolder"
+href="https://agnipathvayu.cdac.in/"
+target="_blank">Air Force</a>
 
-</div>
+<a class="subfolder"
+href="https://www.mpsc.gov.in/"
+target="_blank">MPSC</a>
 
-<!-- SUB -->
+<a class="subfolder"
+href="https://www.ncs.gov.in/"
+target="_blank">National Career Service</a>
 
-<div id="job-maha" class="sub-content">
-<h3>महाराष्ट्र सरकार</h3>
-<div id="data-job-maha"></div>
 </div>
 
-<div id="job-central" class="sub-content">
-<h3>केंद्र सरकार</h3>
-<div id="data-job-central"></div>
-</div>
+<div class="update">
 
-<div id="job-mpsc" class="sub-content">
-<h3>MPSC</h3>
-<div id="data-job-mpsc"></div>
-<a class="direct" href="https://mpsc.gov.in/" target="_blank">🔗 MPSC Official Website</a>
+<div class="headline">
+🆕 नवीन पद
+<span class="new">NEW</span>
 </div>
 
-<div id="job-upsc" class="sub-content">
-<h3>UPSC</h3>
-<div id="data-job-upsc"></div>
-<a class="direct" href="https://upsc.gov.in/" target="_blank">🔗 UPSC Official Website</a>
+<div class="date">
+📅 अर्ज सुरू तारीख: DD-MM-YYYY
 </div>
 
-<div id="job-ssc" class="sub-content">
-<h3>SSC</h3>
-<div id="data-job-ssc"></div>
-<a class="direct" href="https://ssc.gov.in/" target="_blank">🔗 SSC Official Website</a>
+<div class="date">
+📅 शेवटची तारीख: DD-MM-YYYY
 </div>
 
-<div id="job-railway" class="sub-content">
-<h3>Railway</h3>
-<div id="data-job-railway"></div>
-<a class="direct" href="https://www.rrbapply.gov.in/" target="_blank">🔗 Railway Official Portal</a>
-</div>
+<p>🏢 संस्थेचे नाव</p>
 
-<div id="job-banking" class="sub-content">
-<h3>Banking</h3>
-<div id="data-job-banking"></div>
-<a class="direct" href="https://www.ibps.in/" target="_blank">🔗 IBPS Official Website</a>
-</div>
+<p>👥 जागांची संख्या</p>
+
+<a class="direct" href="#" target="_blank">
+🔗 थेट अर्ज करा
+</a>
 
-<div id="job-other" class="sub-content">
-<h3>इतर भरती</h3>
-<div id="data-job-other"></div>
 </div>
 
 </div>
 
 
-<!-- ================================================= -->
-<!-- 2 निकाल -->
-<!-- ================================================= -->
+<!-- ================= निकाल ================= -->
 
-<div id="result" class="main-content">
+<div id="result" class="panel">
 
-<div class="main-title">📝 निकाल</div>
+<h2>📋 निकाल</h2>
 
-<div class="sub-grid">
+<div class="subfolders">
 
-<div class="sub-folder" onclick="openSub('result-ssc')">SSC</div>
-<div class="sub-folder" onclick="openSub('result-hsc')">HSC</div>
-<div class="sub-folder" onclick="openSub('result-mpsc')">MPSC</div>
-<div class="sub-folder" onclick="openSub('result-upsc')">UPSC</div>
-<div class="sub-folder" onclick="openSub('result-railway')">Railway</div>
-<div class="sub-folder" onclick="openSub('result-bank')">Banking</div>
-<div class="sub-folder" onclick="openSub('result-police')">Police</div>
-<div class="sub-folder" onclick="openSub('result-teacher')">Teacher</div>
+<a class="subfolder"
+href="https://www.upsc.gov.in/"
+target="_blank">UPSC निकाल</a>
 
-</div>
+<a class="subfolder"
+href="https://ssc.gov.in/"
+target="_blank">SSC निकाल</a>
 
-<div id="result-ssc" class="sub-content">
-<h3>SSC निकाल</h3>
-<div id="data-result-ssc"></div>
-<a class="direct result" href="https://mahresult.nic.in/" target="_blank">🏆 Direct Result</a>
-</div>
+<a class="subfolder"
+href="https://www.rrbcdg.gov.in/"
+target="_blank">Railway निकाल</a>
 
-<div id="result-hsc" class="sub-content">
-<h3>HSC निकाल</h3>
-<div id="data-result-hsc"></div>
-<a class="direct result" href="https://mahresult.nic.in/" target="_blank">🏆 Direct Result</a>
-</div>
+<a class="subfolder"
+href="https://www.mpsc.gov.in/"
+target="_blank">MPSC निकाल</a>
 
-<div id="result-mpsc" class="sub-content">
-<h3>MPSC निकाल</h3>
-<div id="data-result-mpsc"></div>
-<a class="direct result" href="https://mpsc.gov.in/" target="_blank">🏆 MPSC Official</a>
-</div>
+<a class="subfolder"
+href="https://www.mahapolice.gov.in/"
+target="_blank">Police निकाल</a>
 
-<div id="result-upsc" class="sub-content">
-<h3>UPSC निकाल</h3>
-<div id="data-result-upsc"></div>
-<a class="direct result" href="https://upsc.gov.in/examinations/results" target="_blank">🏆 Direct Result</a>
-</div>
+<a class="subfolder"
+href="https://mahresult.nic.in/"
+target="_blank">Maharashtra Board</a>
 
-<div id="result-railway" class="sub-content">
-<h3>Railway निकाल</h3>
-<div id="data-result-railway"></div>
-<a class="direct result" href="https://www.rrbapply.gov.in/" target="_blank">🏆 Railway Portal</a>
+<a class="subfolder"
+href="https://www.cbse.gov.in/"
+target="_blank">CBSE</a>
+
+<a class="subfolder"
+href="https://www.ugc.gov.in/"
+target="_blank">University</a>
+
 </div>
 
-<div id="result-bank" class="sub-content">
-<h3>Banking निकाल</h3>
-<div id="data-result-bank"></div>
-<a class="direct result" href="https://www.ibps.in/" target="_blank">🏆 IBPS Official</a>
+<div class="update">
+
+<div class="headline">
+🆕 नवीन निकाल
+<span class="new">NEW</span>
 </div>
 
-<div id="result-police" class="sub-content">
-<h3>Police निकाल</h3>
-<div id="data-result-police"></div>
-<a class="direct result" href="https://www.mahapolice.gov.in/" target="_blank">🏆 Police Official</a>
+<div class="date">
+📅 निकालाची तारीख: DD-MM-YYYY
 </div>
 
-<div id="result-teacher" class="sub-content">
-<h3>Teacher निकाल</h3>
-<div id="data-result-teacher"></div>
-<a class="direct result" href="https://www.mahatet.in/" target="_blank">🏆 MahaTET</a>
+<a class="direct" href="#" target="_blank">
+🔗 थेट निकाल पाहा
+</a>
+
 </div>
 
 </div>
 
 
-<!-- ================================================= -->
-<!-- 3 ADMIT CARD -->
-<!-- ================================================= -->
+<!-- ================= ADMIT CARD ================= -->
 
-<div id="admit" class="main-content">
+<div id="admit" class="panel">
 
-<div class="main-title">🎫 Admit Card</div>
+<h2>🎫 Admit Card</h2>
 
-<div class="sub-grid">
+<div class="subfolders">
 
-<div class="sub-folder" onclick="openSub('admit-mpsc')">MPSC</div>
-<div class="sub-folder" onclick="openSub('admit-upsc')">UPSC</div>
-<div class="sub-folder" onclick="openSub('admit-ssc')">SSC</div>
-<div class="sub-folder" onclick="openSub('admit-railway')">Railway</div>
-<div class="sub-folder" onclick="openSub('admit-police')">Police</div>
-<div class="sub-folder" onclick="openSub('admit-teacher')">Teacher</div>
-<div class="sub-folder" onclick="openSub('admit-bank')">Banking</div>
-<div class="sub-folder" onclick="openSub('admit-other')">इतर परीक्षा</div>
+<a class="subfolder"
+href="https://www.upsc.gov.in/"
+target="_blank">UPSC</a>
 
-</div>
+<a class="subfolder"
+href="https://ssc.gov.in/"
+target="_blank">SSC</a>
 
-<div id="admit-mpsc" class="sub-content">
-<h3>MPSC Admit Card</h3>
-<div id="data-admit-mpsc"></div>
-<a class="direct admit" href="https://mpsc.gov.in/" target="_blank">🎫 Direct MPSC</a>
-</div>
+<a class="subfolder"
+href="https://www.rrbcdg.gov.in/"
+target="_blank">Railway</a>
 
-<div id="admit-upsc" class="sub-content">
-<h3>UPSC Admit Card</h3>
-<div id="data-admit-upsc"></div>
-<a class="direct admit" href="https://upsc.gov.in/" target="_blank">🎫 Direct UPSC</a>
-</div>
+<a class="subfolder"
+href="https://www.mpsc.gov.in/"
+target="_blank">MPSC</a>
 
-<div id="admit-ssc" class="sub-content">
-<h3>SSC Admit Card</h3>
-<div id="data-admit-ssc"></div>
-<a class="direct admit" href="https://ssc.gov.in/" target="_blank">🎫 Direct SSC</a>
-</div>
+<a class="subfolder"
+href="https://www.mahapolice.gov.in/"
+target="_blank">Police</a>
 
-<div id="admit-railway" class="sub-content">
-<h3>Railway Admit Card</h3>
-<div id="data-admit-railway"></div>
-<a class="direct admit" href="https://www.rrbapply.gov.in/" target="_blank">🎫 Direct Railway</a>
-</div>
+<a class="subfolder"
+href="https://ctet.nic.in/"
+target="_blank">CTET</a>
 
-<div id="admit-police" class="sub-content">
-<h3>Police Admit Card</h3>
-<div id="data-admit-police"></div>
-<a class="direct admit" href="https://www.mahapolice.gov.in/" target="_blank">🎫 Direct Police</a>
 </div>
 
-<div id="admit-teacher" class="sub-content">
-<h3>Teacher Admit Card</h3>
-<div id="data-admit-teacher"></div>
-<a class="direct admit" href="https://www.mahatet.in/" target="_blank">🎫 Direct Teacher</a>
-</div>
+<div class="update">
 
-<div id="admit-bank" class="sub-content">
-<h3>Banking Admit Card</h3>
-<div id="data-admit-bank"></div>
-<a class="direct admit" href="https://www.ibps.in/" target="_blank">🎫 Direct Banking</a>
+<div class="headline">
+🆕 नवीन Admit Card
+<span class="new">NEW</span>
 </div>
 
-<div id="admit-other" class="sub-content">
-<h3>इतर परीक्षा</h3>
-<div id="data-admit-other"></div>
+<div class="date">
+📅 जारी तारीख: DD-MM-YYYY
 </div>
 
+<div class="date">
+📅 परीक्षा तारीख: DD-MM-YYYY
 </div>
 
+<a class="direct" href="#" target="_blank">
+🔗 Direct Admit Card
+</a>
 
-<!-- ================================================= -->
-<!-- 4 POLICE -->
-<!-- ================================================= -->
+</div>
 
-<div id="police" class="main-content">
+</div>
 
-<div class="main-title">👮 पोलीस भरती</div>
 
-<div class="sub-grid">
+<!-- ================= शालेय शिक्षण ================= -->
 
-<div class="sub-folder" onclick="openSub('police-shipai')">पोलीस शिपाई</div>
-<div class="sub-folder" onclick="openSub('police-driver')">पोलीस चालक</div>
-<div class="sub-folder" onclick="openSub('police-srpf')">SRPF</div>
-<div class="sub-folder" onclick="openSub('police-notice')">जाहिरात</div>
-<div class="sub-folder" onclick="openSub('police-form')">Form</div>
-<div class="sub-folder" onclick="openSub('police-admit')">Admit Card</div>
-<div class="sub-folder" onclick="openSub('police-result')">Result</div>
-<div class="sub-folder" onclick="openSub('police-merit')">Merit List</div>
+<div id="school" class="panel">
 
-</div>
+<h2>📚 शालेय शिक्षण</h2>
 
-<div id="police-shipai" class="sub-content">
-<h3>पोलीस शिपाई</h3>
-<div id="data-police-shipai"></div>
-</div>
+<div class="subfolders">
 
-<div id="police-driver" class="sub-content">
-<h3>पोलीस चालक</h3>
-<div id="data-police-driver"></div>
-</div>
+<a class="subfolder"
+href="https://www.education.gov.in/"
+target="_blank">शिक्षण मंत्रालय</a>
 
-<div id="police-srpf" class="sub-content">
-<h3>SRPF</h3>
-<div id="data-police-srpf"></div>
-</div>
+<a class="subfolder"
+href="https://www.cbse.gov.in/"
+target="_blank">CBSE</a>
 
-<div id="police-notice" class="sub-content">
-<h3>पोलीस भरती जाहिरात</h3>
-<div id="data-police-notice"></div>
-</div>
+<a class="subfolder"
+href="https://www.ncert.nic.in/"
+target="_blank">NCERT</a>
 
-<div id="police-form" class="sub-content">
-<h3>पोलीस भरती Form</h3>
-<div id="data-police-form"></div>
-</div>
+<a class="subfolder"
+href="https://www.mahahsscboard.in/"
+target="_blank">SSC / HSC</a>
 
-<div id="police-admit" class="sub-content">
-<h3>पोलीस Admit Card</h3>
-<div id="data-police-admit"></div>
-</div>
+<a class="subfolder"
+href="https://www.scholarships.gov.in/"
+target="_blank">Scholarship</a>
 
-<div id="police-result" class="sub-content">
-<h3>पोलीस Result</h3>
-<div id="data-police-result"></div>
-</div>
+<a class="subfolder"
+href="https://www.maa.ac.in/"
+target="_blank">SCERT Maharashtra</a>
 
-<div id="police-merit" class="sub-content">
-<h3>पोलीस Merit List</h3>
-<div id="data-police-merit"></div>
 </div>
 
 </div>
 
 
-<!-- ================================================= -->
-<!-- 5 SCHOOL -->
-<!-- ================================================= -->
+<!-- ================= पोलीस भरती ================= -->
 
-<div id="school" class="main-content">
+<div id="police" class="panel">
 
-<div class="main-title">🏫 शालेय शिक्षण</div>
+<h2>👮 पोलीस भरती</h2>
 
-<div class="sub-grid">
+<div class="subfolders">
 
-<div class="sub-folder" onclick="openSub('school-ssc')">SSC</div>
-<div class="sub-folder" onclick="openSub('school-hsc')">HSC</div>
-<div class="sub-folder" onclick="openSub('school-scholarship')">Scholarship</div>
-<div class="sub-folder" onclick="openSub('school-exam')">परीक्षा</div>
-<div class="sub-folder" onclick="openSub('school-result')">निकाल</div>
-<div class="sub-folder" onclick="openSub('school-update')">शैक्षणिक Updates</div>
+<a class="subfolder"
+href="https://www.mahapolice.gov.in/"
+target="_blank">महाराष्ट्र पोलीस</a>
 
-</div>
-
-<div id="school-ssc" class="sub-content">
-<h3>SSC</h3>
-<div id="data-school-ssc"></div>
-<a class="direct result" href="https://mahresult.nic.in/" target="_blank">🏆 Direct Result</a>
-</div>
-
-<div id="school-hsc" class="sub-content">
-<h3>HSC</h3>
-<div id="data-school-hsc"></div>
-<a class="direct result" href="https://mahresult.nic.in/" target="_blank">🏆 Direct Result</a>
-</div>
+<a class="subfolder"
+href="https://www.mahapolice.gov.in/police-recru.php"
+target="_blank">पोलीस भरती</a>
 
-<div id="school-scholarship" class="sub-content">
-<h3>Scholarship</h3>
-<div id="data-school-scholarship"></div>
-<a class="direct form" href="https://mahadbt.maharashtra.gov.in/" target="_blank">🟢 Direct Portal</a>
-</div>
+<a class="subfolder"
+href="https://www.mahapolice.gov.in/"
+target="_blank">पोलीस शिपाई</a>
 
-<div id="school-exam" class="sub-content">
-<h3>परीक्षा</h3>
-<div id="data-school-exam"></div>
-</div>
+<a class="subfolder"
+href="https://www.mahapolice.gov.in/"
+target="_blank">पोलीस चालक</a>
 
-<div id="school-result" class="sub-content">
-<h3>शालेय निकाल</h3>
-<div id="data-school-result"></div>
-</div>
+<a class="subfolder"
+href="https://www.mahapolice.gov.in/"
+target="_blank">SRPF</a>
 
-<div id="school-update" class="sub-content">
-<h3>शैक्षणिक Updates</h3>
-<div id="data-school-update"></div>
 </div>
 
 </div>
 
 
-<!-- ================================================= -->
-<!-- 6 TEACHER -->
-<!-- ================================================= -->
+<!-- ================= शिक्षक भरती ================= -->
 
-<div id="teacher" class="main-content">
+<div id="teacher" class="panel">
 
-<div class="main-title">👨‍🏫 शिक्षक</div>
+<h2>👨‍🏫 शिक्षक भरती</h2>
 
-<div class="sub-grid">
+<div class="subfolders">
 
-<div class="sub-folder" onclick="openSub('teacher-bharti')">शिक्षक भरती</div>
-<div class="sub-folder" onclick="openSub('teacher-pavitra')">Pavitra Portal</div>
-<div class="sub-folder" onclick="openSub('teacher-tait')">TAIT</div>
-<div class="sub-folder" onclick="openSub('teacher-tet')">TET</div>
-<div class="sub-folder" onclick="openSub('teacher-ctet')">CTET</div>
-<div class="sub-folder" onclick="openSub('teacher-result')">निकाल</div>
-<div class="sub-folder" onclick="openSub('teacher-merit')">Merit List</div>
-<div class="sub-folder" onclick="openSub('teacher-selection')">Selection List</div>
-
-</div>
+<a class="subfolder"
+href="https://mahatet.in/"
+target="_blank">TET</a>
 
-<div id="teacher-bharti" class="sub-content">
-<h3>शिक्षक भरती</h3>
-<div id="data-teacher-bharti"></div>
-</div>
+<a class="subfolder"
+href="https://ctet.nic.in/"
+target="_blank">CTET</a>
 
-<div id="teacher-pavitra" class="sub-content">
-<h3>Pavitra Portal</h3>
-<div id="data-teacher-pavitra"></div>
-</div>
+<a class="subfolder"
+href="https://www.mahaportal.org/"
+target="_blank">TAIT</a>
 
-<div id="teacher-tait" class="sub-content">
-<h3>TAIT</h3>
-<div id="data-teacher-tait"></div>
-</div>
+<a class="subfolder"
+href="https://www.mahaportal.org/"
+target="_blank">Pavitra Portal</a>
 
-<div id="teacher-tet" class="sub-content">
-<h3>TET</h3>
-<div id="data-teacher-tet"></div>
-</div>
+<a class="subfolder"
+href="https://www.education.gov.in/"
+target="_blank">प्राथमिक शिक्षक</a>
 
-<div id="teacher-ctet" class="sub-content">
-<h3>CTET</h3>
-<div id="data-teacher-ctet"></div>
-<a class="direct other" href="https://ctet.nic.in/" target="_blank">🔗 CTET Official</a>
-</div>
+<a class="subfolder"
+href="https://www.education.gov.in/"
+target="_blank">माध्यमिक शिक्षक</a>
 
-<div id="teacher-result" class="sub-content">
-<h3>शिक्षक निकाल</h3>
-<div id="data-teacher-result"></div>
-</div>
+<a class="subfolder"
+href="https://www.education.gov.in/"
+target="_blank">उच्च माध्यमिक शिक्षक</a>
 
-<div id="teacher-merit" class="sub-content">
-<h3>Merit List</h3>
-<div id="data-teacher-merit"></div>
-</div>
+<a class="subfolder"
+href="https://www.education.gov.in/"
+target="_blank">शिक्षक निकाल</a>
 
-<div id="teacher-selection" class="sub-content">
-<h3>Selection List</h3>
-<div id="data-teacher-selection"></div>
 </div>
 
 </div>
 
 
-<!-- ================================================= -->
-<!-- 7 MAHADBT -->
-<!-- ================================================= -->
+<!-- ================= महाविद्यालय ================= -->
 
-<div id="dbt" class="main-content">
+<div id="college" class="panel">
 
-<div class="main-title">🎓 MahaDBT</div>
+<h2>🎓 महाविद्यालय</h2>
 
-<div class="sub-grid">
+<div class="subfolders">
 
-<div class="sub-folder" onclick="openSub('dbt-scholarship')">Scholarship</div>
-<div class="sub-folder" onclick="openSub('dbt-scheme')">योजना</div>
-<div class="sub-folder" onclick="openSub('dbt-apply')">अर्ज</div>
-<div class="sub-folder" onclick="openSub('dbt-status')">Application Status</div>
-<div class="sub-folder" onclick="openSub('dbt-eligible')">Eligible Schemes</div>
-<div class="sub-folder" onclick="openSub('dbt-other')">इतर</div>
+<a class="subfolder" href="#">BA</a>
+<a class="subfolder" href="#">BSc</a>
+<a class="subfolder" href="#">BCom</a>
+<a class="subfolder" href="#">BEd</a>
+<a class="subfolder" href="#">D.El.Ed / D.Ed</a>
+<a class="subfolder" href="#">MA</a>
+<a class="subfolder" href="#">MSc</a>
+<a class="subfolder" href="#">MCom</a>
+<a class="subfolder" href="#">MEd</a>
+<a class="subfolder" href="#">PhD</a>
+<a class="subfolder" href="#">Engineering</a>
+<a class="subfolder" href="#">Medical</a>
+<a class="subfolder" href="#">Pharmacy</a>
+<a class="subfolder" href="#">Law</a>
+<a class="subfolder" href="#">Diploma</a>
 
 </div>
 
-<div id="dbt-scholarship" class="sub-content">
-<h3>Scholarship</h3>
-<div id="data-dbt-scholarship"></div>
-<a class="direct form" href="https://mahadbt.maharashtra.gov.in/" target="_blank">🟢 Direct MahaDBT</a>
 </div>
 
-<div id="dbt-scheme" class="sub-content">
-<h3>योजना</h3>
-<div id="data-dbt-scheme"></div>
-<a class="direct other" href="https://mahadbt.maharashtra.gov.in/" target="_blank">🔗 Direct Portal</a>
-</div>
 
-<div id="dbt-apply" class="sub-content">
-<h3>अर्ज</h3>
-<div id="data-dbt-apply"></div>
-<a class="direct form" href="https://mahadbt.maharashtra.gov.in/" target="_blank">🟢 Direct Apply</a>
-</div>
+<!-- ================= MAHADBT ================= -->
 
-<div id="dbt-status" class="sub-content">
-<h3>Application Status</h3>
-<div id="data-dbt-status"></div>
-<a class="direct other" href="https://mahadbt.maharashtra.gov.in/" target="_blank">📊 Direct Status</a>
-</div>
+<div id="dbt" class="panel">
 
-<div id="dbt-eligible" class="sub-content">
-<h3>Eligible Schemes</h3>
-<div id="data-dbt-eligible"></div>
-<a class="direct other" href="https://mahadbt.maharashtra.gov.in/" target="_blank">🔍 Direct Portal</a>
-</div>
+<h2>💻 MahaDBT</h2>
 
-<div id="dbt-other" class="sub-content">
-<h3>इतर MahaDBT माहिती</h3>
-<div id="data-dbt-other"></div>
-</div>
+<div class="subfolders">
 
-</div>
+<a class="subfolder"
+href="https://mahadbt.maharashtra.gov.in/"
+target="_blank">Hostel DBT</a>
 
+<a class="subfolder"
+href="https://mahadbt.maharashtra.gov.in/"
+target="_blank">Post-Matric Scholarship</a>
 
-<!-- ================================================= -->
-<!-- 8 COLLEGE -->
-<!-- ================================================= -->
+<a class="subfolder"
+href="https://mahadbt.maharashtra.gov.in/"
+target="_blank">Pre-Matric Scholarship</a>
 
-<div id="college" class="main-content">
+<a class="subfolder"
+href="https://mahadbt.maharashtra.gov.in/"
+target="_blank">Tuition Fee</a>
 
-<div class="main-title">🎓 महाविद्यालय</div>
+<a class="subfolder"
+href="https://mahadbt.maharashtra.gov.in/"
+target="_blank">Maintenance Allowance</a>
 
-<div class="sub-grid">
+<a class="subfolder"
+href="https://mahadbt.maharashtra.gov.in/"
+target="_blank">Merit Scholarship</a>
 
-<div class="sub-folder" onclick="openSub('college-cet')">CET</div>
-<div class="sub-folder" onclick="openSub('college-admission')">Admission</div>
-<div class="sub-folder" onclick="openSub('college-scholarship')">Scholarship</div>
-<div class="sub-folder" onclick="openSub('college-university')">University</div>
-<div class="sub-folder" onclick="openSub('college-exam')">Exam</div>
-<div class="sub-folder" onclick="openSub('college-result')">Result</div>
-<div class="sub-folder" onclick="openSub('college-merit')">Merit List</div>
+<a class="subfolder"
+href="https://mahadbt.maharashtra.gov.in/"
+target="_blank">Tribal Scholarship</a>
 
-</div>
+<a class="subfolder"
+href="https://mahadbt.maharashtra.gov.in/"
+target="_blank">Minority Scholarship</a>
 
-<div id="college-cet" class="sub-content">
-<h3>CET</h3>
-<div id="data-college-cet"></div>
-<a class="direct other" href="https://cetcell.mahacet.org/" target="_blank">🔗 CET Cell</a>
-</div>
+<a class="subfolder"
+href="https://mahadbt.maharashtra.gov.in/"
+target="_blank">दिव्यांग योजना</a>
 
-<div id="college-admission" class="sub-content">
-<h3>Admission</h3>
-<div id="data-college-admission"></div>
 </div>
 
-<div id="college-scholarship" class="sub-content">
-<h3>Scholarship</h3>
-<div id="data-college-scholarship"></div>
 </div>
 
-<div id="college-university" class="sub-content">
-<h3>University</h3>
-<div id="data-college-university"></div>
-</div>
 
-<div id="college-exam" class="sub-content">
-<h3>Exam</h3>
-<div id="data-college-exam"></div>
-</div>
+<!-- ================= GR ================= -->
 
-<div id="college-result" class="sub-content">
-<h3>Result</h3>
-<div id="data-college-result"></div>
-</div>
+<div id="gr" class="panel">
 
-<div id="college-merit" class="sub-content">
-<h3>Merit List</h3>
-<div id="data-college-merit"></div>
-</div>
+<h2>📜 सरकारी GR</h2>
 
-</div>
+<div class="subfolders">
 
+<a class="subfolder"
+href="https://gr.maharashtra.gov.in/"
+target="_blank">सर्व सरकारी GR</a>
 
-<!-- ================================================= -->
-<!-- 9 LATEST UPDATES -->
-<!-- ================================================= -->
+<a class="subfolder"
+href="https://www.education.gov.in/"
+target="_blank">शालेय शिक्षण GR</a>
 
-<div id="updates" class="main-content">
+<a class="subfolder"
+href="https://www.education.gov.in/"
+target="_blank">शिक्षक GR</a>
 
-<div class="main-title">📢 Latest Updates</div>
+<a class="subfolder"
+href="https://www.mahapolice.gov.in/"
+target="_blank">पोलीस GR</a>
 
-<div class="sub-grid">
+<a class="subfolder"
+href="https://sjsa.maharashtra.gov.in/"
+target="_blank">सामाजिक न्याय GR</a>
 
-<div class="sub-folder" onclick="openSub('updates-job')">नवीन जाहिराती</div>
-<div class="sub-folder" onclick="openSub('updates-form')">नवीन Forms</div>
-<div class="sub-folder" onclick="openSub('updates-result')">नवीन Results</div>
-<div class="sub-folder" onclick="openSub('updates-admit')">नवीन Admit Cards</div>
-<div class="sub-folder" onclick="openSub('updates-news')">महत्त्वाच्या बातम्या</div>
+<a class="subfolder"
+href="https://tribal.maharashtra.gov.in/"
+target="_blank">आदिवासी विकास GR</a>
 
-</div>
+<a class="subfolder"
+href="https://rdd.maharashtra.gov.in/"
+target="_blank">ग्रामविकास GR</a>
 
-<div id="updates-job" class="sub-content">
-<h3>नवीन जाहिराती</h3>
-<div id="data-updates-job"></div>
 </div>
 
-<div id="updates-form" class="sub-content">
-<h3>नवीन Forms</h3>
-<div id="data-updates-form"></div>
 </div>
 
-<div id="updates-result" class="sub-content">
-<h3>नवीन Results</h3>
-<div id="data-updates-result"></div>
-</div>
 
-<div id="updates-admit" class="sub-content">
-<h3>नवीन Admit Cards</h3>
-<div id="data-updates-admit"></div>
-</div>
+<!-- ================= जिल्हा परिषद ================= -->
 
-<div id="updates-news" class="sub-content">
-<h3>महत्त्वाच्या बातम्या</h3>
-<div id="data-updates-news"></div>
-</div>
+<div id="zp" class="panel">
 
-</div>
+<h2>🏢 जिल्हा परिषद</h2>
 
+<div class="subfolders">
 
-<!-- ================================================= -->
-<!-- 10 GR -->
-<!-- ================================================= -->
+<a class="subfolder"
+href="https://rdd.maharashtra.gov.in/"
+target="_blank">जिल्हा परिषद जाहिरात</a>
 
-<div id="gr" class="main-content">
+<a class="subfolder"
+href="https://ahilyanagarzp.gov.in/"
+target="_blank">अहिल्यानगर</a>
 
-<div class="main-title">📜 सरकारी GR</div>
+<a class="subfolder"
+href="https://zpsangli.com/"
+target="_blank">सांगली</a>
 
-<div class="sub-grid">
+<a class="subfolder"
+href="https://kolhapur.gov.in/"
+target="_blank">कोल्हापूर</a>
 
-<div class="sub-folder" onclick="openSub('gr-school')">शालेय शिक्षण GR</div>
-<div class="sub-folder" onclick="openSub('gr-teacher')">शिक्षक GR</div>
-<div class="sub-folder" onclick="openSub('gr-rural')">ग्रामविकास GR</div>
-<div class="sub-folder" onclick="openSub('gr-general')">सामान्य प्रशासन GR</div>
-<div class="sub-folder" onclick="openSub('gr-new')">नवीन GR</div>
-<div class="sub-folder" onclick="openSub('gr-pdf')">GR PDF</div>
+<a class="subfolder"
+href="https://punezp.org/"
+target="_blank">पुणे</a>
 
-</div>
+<a class="subfolder"
+href="https://zpjalna.gov.in/"
+target="_blank">जालना</a>
 
-<div id="gr-school" class="sub-content">
-<h3>शालेय शिक्षण GR</h3>
-<div id="data-gr-school"></div>
-<a class="direct other" href="https://gr.maharashtra.gov.in/" target="_blank">📜 Direct GR</a>
-</div>
+<a class="subfolder"
+href="https://zpnashik.maharashtra.gov.in/"
+target="_blank">नाशिक</a>
 
-<div id="gr-teacher" class="sub-content">
-<h3>शिक्षक GR</h3>
-<div id="data-gr-teacher"></div>
-<a class="direct other" href="https://gr.maharashtra.gov.in/" target="_blank">📜 Direct GR</a>
-</div>
+<a class="subfolder"
+href="https://www.maharashtra.gov.in/"
+target="_blank">इतर जिल्हे</a>
 
-<div id="gr-rural" class="sub-content">
-<h3>ग्रामविकास GR</h3>
-<div id="data-gr-rural"></div>
-<a class="direct other" href="https://gr.maharashtra.gov.in/" target="_blank">📜 Direct GR</a>
 </div>
 
-<div id="gr-general" class="sub-content">
-<h3>सामान्य प्रशासन GR</h3>
-<div id="data-gr-general"></div>
-<a class="direct other" href="https://gr.maharashtra.gov.in/" target="_blank">📜 Direct GR</a>
+<div class="update">
+
+<div class="headline">
+🆕 नवीन जिल्हा परिषद जाहिरात
+<span class="new">NEW</span>
 </div>
 
-<div id="gr-new" class="sub-content">
-<h3>नवीन GR</h3>
-<div id="data-gr-new"></div>
-<a class="direct other" href="https://gr.maharashtra.gov.in/" target="_blank">📜 Direct GR</a>
+<div class="date">
+📅 तारीख: DD-MM-YYYY
 </div>
 
-<div id="gr-pdf" class="sub-content">
-<h3>GR PDF</h3>
-<div id="data-gr-pdf"></div>
+<a class="direct" href="#" target="_blank">
+🔗 अधिकृत जाहिरात
+</a>
+
 </div>
 
 </div>
+
 
+<!-- CONTACT -->
 
 <div class="contact">
-<h3>📞 संपर्क</h3>
-<a href="tel:8408088784">📞 8408088784</a>
-<a href="https://wa.me/918408088784" target="_blank">💬 WhatsApp</a>
-</div>
+
+<h2>📞 Contact</h2>
+
+<p>Maha Shiv</p>
+
+<p>Education • Jobs • Results • Latest Updates</p>
 
 </div>
 
-<footer>
-© 2026 Maha Shiv
-</footer>
+</div>
 
 
 <script>
 
-/* =====================================================
-   येथे फक्त VERIFIED माहिती टाकायची आहे.
+function openFolder(id){
 
-   category:
-   job / result / admit / police / school /
-   teacher / dbt / college / updates / gr
+document.querySelectorAll(".panel").forEach(function(panel){
 
-   sub:
-   त्या folder चा sub-main id
+panel.classList.remove("active");
 
-   start:
-   Form सुरू तारीख
+});
 
-   end:
-   Form शेवटची तारीख
+let selected=document.getElementById(id);
 
-   notice:
-   Direct जाहिरात
+if(selected){
 
-   form:
-   Direct Form
+selected.classList.add("active");
 
-   admit:
-   Direct Admit Card
+selected.scrollIntoView({
 
-   result:
-   Direct Result
+behavior:"smooth",
 
-   merit:
-   Direct Merit List
+block:"start"
 
-   other:
-   इतर Direct Link
-===================================================== */
-
-const DATA = [
-
-/*
-{
- category:"job",
- sub:"mpsc",
- post:"पदाचे नाव",
- start:"2026-08-15",
- end:"2026-08-30",
- notice:"OFFICIAL NOTICE LINK",
- form:"OFFICIAL FORM LINK",
- admit:"OFFICIAL ADMIT CARD LINK",
- result:"OFFICIAL RESULT LINK",
- merit:"OFFICIAL MERIT LINK",
- other:"OFFICIAL OTHER LINK"
-}
-*/
-
-];
-
-
-/* तारीख */
-
-function formatDate(value){
-
-  if(!value) return "—";
-
-  const d = new Date(value + "T00:00:00");
-
-  if(isNaN(d)) return "—";
-
-  return d.toLocaleDateString("mr-IN",{
-    day:"2-digit",
-    month:"2-digit",
-    year:"numeric"
-  });
-}
-
-
-/* CARD */
-
-function createCard(x,expired){
-
-  const card=document.createElement("div");
-
-  card.className="info-card";
-
-  if(expired){
-    card.style.borderLeftColor="#777";
-  }
-
-  card.innerHTML=`
-
-    <div class="post">
-      🔴 ${x.post || "माहिती"}
-    </div>
-
-    ${
-      x.start
-      ?
-      `<div class="date start">
-        📅 Form सुरू: ${formatDate(x.start)}
-      </div>`
-      :
-      ""
-    }
-
-    ${
-      x.end
-      ?
-      `<div class="date end">
-        ⏰ Form शेवट: ${formatDate(x.end)}
-      </div>`
-      :
-      ""
-    }
-
-    ${
-      x.notice
-      ?
-      `<a class="direct notice"
-         href="${x.notice}"
-         target="_blank">
-         📢 Direct जाहिरात
-       </a>`
-      :
-      ""
-    }
-
-    ${
-      x.form
-      ?
-      `<a class="direct form"
-         href="${x.form}"
-         target="_blank">
-         🟢 Direct Form
-       </a>`
-      :
-      ""
-    }
-
-    ${
-      x.admit
-      ?
-      `<a class="direct admit"
-         href="${x.admit}"
-         target="_blank">
-         🎫 Direct Admit Card
-       </a>`
-      :
-      ""
-    }
-
-    ${
-      x.result
-      ?
-      `<a class="direct result"
-         href="${x.result}"
-         target="_blank">
-         🏆 ${x.post || "पद"} — Direct Result
-       </a>`
-      :
-      ""
-    }
-
-    ${
-      x.merit
-      ?
-      `<a class="direct merit"
-         href="${x.merit}"
-         target="_blank">
-         📋 Direct Merit List
-       </a>`
-      :
-      ""
-    }
-
-    ${
-      x.other
-      ?
-      `<a class="direct other"
-         href="${x.other}"
-         target="_blank">
-         🔗 Direct इतर माहिती
-       </a>`
-      :
-      ""
-    }
-
-  `;
-
-  return card;
-}
-
-
-/* DATA LOAD */
-
-function loadData(){
-
-  DATA.forEach(x=>{
-
-    const box =
-      document.getElementById(
-        "data-" + x.category + "-" + x.sub
-      );
-
-    if(!box) return;
-
-    const today = new Date();
-
-    today.setHours(23,59,59,999);
-
-    let expired=false;
-
-    if(x.end){
-
-      const end =
-        new Date(x.end + "T23:59:59");
-
-      if(end < today){
-        expired=true;
-      }
-
-    }
-
-    box.appendChild(
-      createCard(x,expired)
-    );
-
-  });
+});
 
 }
 
-
-/* MAIN OPEN */
-
-function openMain(id){
-
-  document
-  .querySelectorAll(".main-content")
-  .forEach(x=>{
-    x.classList.remove("active");
-  });
-
-  document
-  .querySelectorAll(".sub-content")
-  .forEach(x=>{
-    x.classList.remove("active");
-  });
-
-  const box=document.getElementById(id);
-
-  if(box){
-
-    box.classList.add("active");
-
-    box.scrollIntoView({
-      behavior:"smooth",
-      block:"start"
-    });
-
-  }
-
 }
-
-
-/* SUB OPEN */
-
-function openSub(id){
-
-  document
-  .querySelectorAll(".sub-content")
-  .forEach(x=>{
-    x.classList.remove("active");
-  });
-
-  const box=document.getElementById(id);
-
-  if(box){
-
-    box.classList.add("active");
-
-    box.scrollIntoView({
-      behavior:"smooth",
-      block:"start"
-    });
-
-  }
-
-}
-
-
-/* START */
-
-loadData();
 
 </script>
 
 </body>
- </html>
+  </html>
