@@ -1,0 +1,41 @@
+name: Maha Shiv Hourly Update
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout website
+        uses: actions/checkout@v4
+
+      - name: Check website
+        run: |
+          echo "Maha Shiv hourly check started"
+          echo "Date: $(date -u)"
+
+      - name: Check live website
+        run: |
+          curl -I --max-time 30 \
+          https://phupateshankar143-alt.github.io/mahashiv-/
+
+      - name: Commit changes if any
+        run: |
+          git config user.name "Maha Shiv Bot"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add .
+
+          if git diff --cached --quiet; then
+            echo "No changes found."
+          else
+            git commit -m "Hourly Maha Shiv update"
+            git push
+          fi
