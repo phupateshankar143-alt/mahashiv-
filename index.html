@@ -2,477 +2,1339 @@
 <html lang="mr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Maha Shiv | Education Jobs Results Updates</title>
-<meta name="description" content="Maha Shiv - सरकारी नोकरी, निकाल, Admit Card, पोलीस भरती, शिक्षक, MahaDBT, महाविद्यालय, Latest Updates आणि सरकारी GR">
-<meta name="robots" content="index,follow">
+
+<meta name="description"
+content="Maha Shiv - सरकारी नोकरी, निकाल, Admit Card, पोलीस भरती, शालेय शिक्षण, शिक्षक, MahaDBT, महाविद्यालय, Latest Updates आणि सरकारी GR">
+
+<meta name="robots" content="index, follow">
 
 <style>
-*{box-sizing:border-box}
-body{
- margin:0;
- font-family:Arial,"Noto Sans Devanagari",sans-serif;
- background:#eef5ff;
- color:#222
-}
-header{
- background:linear-gradient(135deg,#003c8f,#0088cc);
- color:white;
- text-align:center;
- padding:18px 10px
-}
-header h1{
- margin:0;
- font-size:30px;
- font-weight:900;
- animation:glow 1.5s infinite alternate
-}
-header p{margin:6px 0 0;font-weight:bold}
 
-@keyframes glow{
- from{text-shadow:0 0 4px #fff,0 0 8px #00eaff}
- to{text-shadow:0 0 8px #fff,0 0 22px #00eaff}
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:Arial,"Noto Sans Devanagari",sans-serif;
+  background:#eef4ff;
+  color:#222;
+}
+
+header{
+  background:linear-gradient(135deg,#003b88,#008bd2);
+  color:#fff;
+  text-align:center;
+  padding:16px 8px;
+}
+
+header h1{
+  margin:0;
+  font-size:30px;
+  font-weight:900;
+  animation:shine 1.5s infinite alternate;
+}
+
+header p{
+  margin:5px 0 0;
+  font-weight:bold;
+  font-size:14px;
+}
+
+@keyframes shine{
+  from{
+    text-shadow:0 0 4px #fff;
+  }
+  to{
+    text-shadow:
+      0 0 8px #fff,
+      0 0 18px #00ffff,
+      0 0 28px #00ffff;
+  }
 }
 
 .container{
- max-width:720px;
- margin:auto;
- padding:12px
+  max-width:760px;
+  margin:auto;
+  padding:10px;
 }
 
 .welcome{
- background:white;
- border-radius:14px;
- padding:12px;
- text-align:center;
- box-shadow:0 3px 10px #bbb;
- margin-bottom:12px
+  background:#fff;
+  border-radius:14px;
+  padding:12px;
+  text-align:center;
+  margin-bottom:10px;
+  box-shadow:0 3px 12px #bbb;
 }
 
-.welcome h2{margin:0;font-size:20px}
-
-.grid{
- display:grid;
- grid-template-columns:1fr 1fr;
- gap:8px
+.welcome h2{
+  margin:0;
+  font-size:20px;
+  font-weight:900;
 }
 
-.folder{
- min-height:58px;
- border-radius:12px;
- display:flex;
- align-items:center;
- justify-content:center;
- text-align:center;
- font-weight:900;
- border:2px solid white;
- box-shadow:0 3px 10px #aaa;
- cursor:pointer;
- transition:.25s
+/* MAIN FOLDERS */
+
+.main-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
 }
 
-.folder:hover{transform:scale(1.03)}
-
-.folder span{
- font-size:14px;
- font-weight:900;
- animation:glowText 1.5s infinite alternate
+.main-folder{
+  min-height:58px;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  border:2px solid #fff;
+  cursor:pointer;
+  box-shadow:0 3px 10px rgba(0,0,0,.22);
+  transition:.25s;
 }
 
-@keyframes glowText{
- from{text-shadow:0 0 3px #fff}
- to{text-shadow:0 0 10px currentColor,0 0 18px currentColor}
+.main-folder:hover{
+  transform:scale(1.03);
 }
 
-.f1{background:#ffe0a8;color:#a84a00}
-.f2{background:#bcdcff;color:#064fa8}
-.f3{background:#dec5ff;color:#6b159c}
-.f4{background:#ffc3c3;color:#a80000}
-.f5{background:#bdf3d0;color:#08723b}
-.f6{background:#b9efff;color:#006b96}
-.f7{background:#ffe88b;color:#765500}
-.f8{background:#dfc3ff;color:#70159a}
-.f9{background:#ffc993;color:#a84400}
-.f10{background:#dce1e5;color:#263238}
-
-.content{
- display:none;
- background:white;
- border-radius:14px;
- padding:12px;
- margin-top:12px;
- box-shadow:0 3px 12px #bbb
+.main-folder span{
+  font-size:14px;
+  font-weight:900;
+  animation:folderGlow 1.6s infinite alternate;
 }
 
-.content.active{display:block}
-
-.content h2{
- text-align:center;
- margin:3px 0 12px;
- font-size:21px
+@keyframes folderGlow{
+  from{
+    text-shadow:0 0 3px #fff;
+  }
+  to{
+    text-shadow:0 0 7px currentColor,
+                0 0 15px currentColor;
+  }
 }
 
-.card{
- background:#f2fff5;
- border-left:5px solid #079345;
- border-radius:10px;
- padding:10px;
- margin:8px 0
+.c1{background:#ffe0a5;color:#a94b00}
+.c2{background:#bcdcff;color:#0750a5}
+.c3{background:#dfc5ff;color:#6b159c}
+.c4{background:#ffc3c3;color:#a90000}
+.c5{background:#bff2d0;color:#08733b}
+.c6{background:#b9efff;color:#006c96}
+.c7{background:#ffe98c;color:#765500}
+.c8{background:#dfc4ff;color:#70159a}
+.c9{background:#ffca98;color:#a84a00}
+.c10{background:#dce1e5;color:#263238}
+
+/* MAIN CONTENT */
+
+.main-content{
+  display:none;
+  background:#fff;
+  border-radius:14px;
+  padding:10px;
+  margin-top:10px;
+  box-shadow:0 3px 12px #bbb;
 }
 
-.card.expired{
- background:#eee;
- border-left-color:#777
+.main-content.active{
+  display:block;
+}
+
+.main-title{
+  text-align:center;
+  font-size:21px;
+  font-weight:900;
+  margin:4px 0 12px;
+}
+
+/* SUB MAIN */
+
+.sub-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:7px;
+}
+
+.sub-folder{
+  background:linear-gradient(135deg,#f5f8ff,#dfeaff);
+  border:1px solid #9dbbe5;
+  border-radius:9px;
+  padding:10px 5px;
+  text-align:center;
+  font-weight:900;
+  color:#064da3;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.sub-folder:hover{
+  background:#d4e5ff;
+  transform:scale(1.02);
+}
+
+/* SUB CONTENT */
+
+.sub-content{
+  display:none;
+  margin-top:10px;
+  padding:10px;
+  border-radius:12px;
+  background:#f8fbff;
+  border:1px solid #cbdcf4;
+}
+
+.sub-content.active{
+  display:block;
+}
+
+.sub-content h3{
+  text-align:center;
+  margin:4px 0 10px;
+  color:#064da3;
+}
+
+/* INFORMATION CARD */
+
+.info-card{
+  background:#fff;
+  border-left:5px solid #0a9145;
+  border-radius:9px;
+  padding:10px;
+  margin:8px 0;
+  box-shadow:0 2px 7px #ddd;
 }
 
 .post{
- color:#064fa8;
- font-weight:900;
- font-size:16px
+  font-size:16px;
+  font-weight:900;
+  color:#064da3;
 }
 
 .date{
- font-weight:bold;
- margin-top:4px
+  font-weight:bold;
+  margin-top:4px;
 }
 
-.end{color:#c00000}
-
-.btn{
- display:block;
- text-align:center;
- text-decoration:none;
- font-weight:900;
- padding:9px;
- margin-top:7px;
- border-radius:8px
+.start{
+  color:#08733b;
 }
 
-.form{background:#cdf5d8;color:#08723b}
-.result{background:#dceaff;color:#064fa8}
-.admit{background:#ffe7c4;color:#a65700}
-.other{background:#eadcff;color:#6b159c}
+.end{
+  color:#c00000;
+}
+
+/* DIRECT BUTTONS */
+
+.direct{
+  display:block;
+  text-decoration:none;
+  text-align:center;
+  font-weight:900;
+  padding:9px;
+  margin-top:7px;
+  border-radius:8px;
+}
+
+.notice{
+  background:#fff0d4;
+  color:#9b5300;
+}
+
+.form{
+  background:#d1f6dd;
+  color:#08733b;
+}
+
+.admit{
+  background:#ffe3bd;
+  color:#a45500;
+}
+
+.result{
+  background:#dceaff;
+  color:#064da3;
+}
+
+.merit{
+  background:#eadcff;
+  color:#6b159c;
+}
+
+.other{
+  background:#eeeeee;
+  color:#444;
+}
+
+/* EXPIRED */
 
 .expired-title{
- margin-top:18px;
- background:#e8e8e8;
- color:#555;
- border-radius:8px;
- padding:9px;
- text-align:center;
- font-weight:900
+  margin-top:15px;
+  padding:9px;
+  border-radius:8px;
+  text-align:center;
+  font-weight:900;
+  color:#666;
+  background:#e8e8e8;
 }
 
-.content>a{
- display:block;
- background:#edf5ff;
- color:#064fa8;
- text-decoration:none;
- font-weight:900;
- padding:10px;
- border-left:5px solid #1261c9;
- border-radius:8px;
- margin:7px 0
-}
+/* CONTACT */
 
 .contact{
- margin-top:14px;
- background:white;
- border-radius:14px;
- padding:14px;
- text-align:center;
- box-shadow:0 3px 10px #bbb
+  margin-top:12px;
+  background:#fff;
+  border-radius:14px;
+  padding:14px;
+  text-align:center;
+  box-shadow:0 3px 10px #bbb;
 }
 
 .contact a{
- display:block;
- margin:7px;
- text-decoration:none;
- font-weight:bold
+  display:block;
+  text-decoration:none;
+  margin:7px;
+  font-weight:bold;
 }
 
-footer{text-align:center;padding:18px;font-weight:bold;font-size:13px}
+footer{
+  text-align:center;
+  padding:18px;
+  font-weight:bold;
+  font-size:13px;
+}
 
 @media(max-width:500px){
- .folder span{font-size:13px}
- header h1{font-size:27px}
+
+  .main-grid,
+  .sub-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .main-folder span{
+    font-size:13px;
+  }
+
+  header h1{
+    font-size:27px;
+  }
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>🌟 Maha Shiv</h1>
-<p>Education • Jobs • Results • Latest Updates</p>
+  <h1>🌟 Maha Shiv</h1>
+  <p>Education • Jobs • Results • Latest Updates</p>
 </header>
 
 <div class="container">
 
 <div class="welcome">
-<h2>Welcome to Maha Shiv</h2>
-<p>सरकारी नोकरी • निकाल • शिक्षण • नवीन अपडेट्स</p>
+  <h2>Welcome to Maha Shiv</h2>
+  <p>शिक्षण • सरकारी नोकरी • निकाल • नवीन अपडेट्स</p>
 </div>
 
-<div class="grid">
+<!-- ========================= -->
+<!-- 10 MAIN FOLDERS -->
+<!-- ========================= -->
 
-<div class="folder f1" onclick="openFolder('job')"><span>💼 सरकारी नोकरी</span></div>
-<div class="folder f2" onclick="openFolder('result')"><span>📝 निकाल</span></div>
-<div class="folder f3" onclick="openFolder('admit')"><span>🎫 Admit Card</span></div>
-<div class="folder f4" onclick="openFolder('police')"><span>👮 पोलीस भरती</span></div>
-<div class="folder f5" onclick="openFolder('school')"><span>🏫 शालेय शिक्षण</span></div>
-<div class="folder f6" onclick="openFolder('teacher')"><span>👨‍🏫 शिक्षक</span></div>
-<div class="folder f7" onclick="openFolder('dbt')"><span>🎓 MahaDBT</span></div>
-<div class="folder f8" onclick="openFolder('college')"><span>🎓 महाविद्यालय</span></div>
-<div class="folder f9" onclick="openFolder('updates')"><span>📢 Latest Updates</span></div>
-<div class="folder f10" onclick="openFolder('gr')"><span>📜 सरकारी GR</span></div>
+<div class="main-grid">
+
+<div class="main-folder c1" onclick="openMain('job')">
+<span>💼 सरकारी नोकरी</span>
+</div>
+
+<div class="main-folder c2" onclick="openMain('result')">
+<span>📝 निकाल</span>
+</div>
+
+<div class="main-folder c3" onclick="openMain('admit')">
+<span>🎫 Admit Card</span>
+</div>
+
+<div class="main-folder c4" onclick="openMain('police')">
+<span>👮 पोलीस भरती</span>
+</div>
+
+<div class="main-folder c5" onclick="openMain('school')">
+<span>🏫 शालेय शिक्षण</span>
+</div>
+
+<div class="main-folder c6" onclick="openMain('teacher')">
+<span>👨‍🏫 शिक्षक</span>
+</div>
+
+<div class="main-folder c7" onclick="openMain('dbt')">
+<span>🎓 MahaDBT</span>
+</div>
+
+<div class="main-folder c8" onclick="openMain('college')">
+<span>🎓 महाविद्यालय</span>
+</div>
+
+<div class="main-folder c9" onclick="openMain('updates')">
+<span>📢 Latest Updates</span>
+</div>
+
+<div class="main-folder c10" onclick="openMain('gr')">
+<span>📜 सरकारी GR</span>
+</div>
 
 </div>
 
-<!-- सरकारी नोकरी -->
-<div id="job" class="content">
-<h2>💼 सरकारी नोकरी</h2>
 
-<div id="job-list"></div>
+<!-- ================================================= -->
+<!-- 1 सरकारी नोकरी -->
+<!-- ================================================= -->
 
-<div class="expired-title">⏳ मुदत संपलेले Forms</div>
-<div id="job-expired"></div>
+<div id="job" class="main-content">
 
-<a href="https://mpsc.gov.in/" target="_blank">📢 MPSC Official Website</a>
-<a href="https://upsc.gov.in/" target="_blank">🇮🇳 UPSC Official Website</a>
-<a href="https://ssc.gov.in/" target="_blank">🛡️ SSC Official Website</a>
-<a href="https://www.ibps.in/" target="_blank">🏦 IBPS Official Website</a>
-<a href="https://www.rrbapply.gov.in/" target="_blank">🚆 Railway Official Portal</a>
+<div class="main-title">💼 सरकारी नोकरी</div>
+
+<div class="sub-grid">
+
+<div class="sub-folder" onclick="openSub('job-maha')">
+महाराष्ट्र सरकार
 </div>
 
-<!-- निकाल -->
-<div id="result" class="content">
-<h2>📝 निकाल</h2>
-
-<div id="result-list"></div>
-
-<a href="https://mahresult.nic.in/" target="_blank">🏆 Maharashtra Board Result</a>
-<a href="https://mpsc.gov.in/" target="_blank">🏆 MPSC Result</a>
-<a href="https://upsc.gov.in/examinations/results" target="_blank">🏆 UPSC Result</a>
+<div class="sub-folder" onclick="openSub('job-central')">
+केंद्र सरकार
 </div>
 
-<!-- Admit Card -->
-<div id="admit" class="content">
-<h2>🎫 Admit Card</h2>
-<div id="admit-list"></div>
-
-<a href="https://mpsc.gov.in/" target="_blank">🎫 MPSC</a>
-<a href="https://ssc.gov.in/" target="_blank">🎫 SSC</a>
-<a href="https://upsc.gov.in/" target="_blank">🎫 UPSC</a>
-<a href="https://ctet.nic.in/" target="_blank">🎫 CTET</a>
+<div class="sub-folder" onclick="openSub('job-mpsc')">
+MPSC
 </div>
 
-<!-- Police -->
-<div id="police" class="content">
-<h2>👮 पोलीस भरती</h2>
-<div id="police-list"></div>
-<div class="expired-title">⏳ मुदत संपलेले Forms</div>
-<div id="police-expired"></div>
-
-<a href="https://www.mahapolice.gov.in/" target="_blank">👮 Maharashtra Police Official</a>
+<div class="sub-folder" onclick="openSub('job-upsc')">
+UPSC
 </div>
 
-<!-- School -->
-<div id="school" class="content">
-<h2>🏫 शालेय शिक्षण</h2>
-<div id="school-list"></div>
-<div class="expired-title">⏳ मुदत संपलेले Forms</div>
-<div id="school-expired"></div>
-
-<a href="https://education.maharashtra.gov.in/" target="_blank">🏫 School Education</a>
-<a href="https://mahresult.nic.in/" target="_blank">🏆 Board Result</a>
+<div class="sub-folder" onclick="openSub('job-ssc')">
+SSC
 </div>
 
-<!-- Teacher -->
-<div id="teacher" class="content">
-<h2>👨‍🏫 शिक्षक</h2>
-<div id="teacher-list"></div>
-<div class="expired-title">⏳ मुदत संपलेले Forms</div>
-<div id="teacher-expired"></div>
-
-<a href="https://www.mahatet.in/" target="_blank">📝 MahaTET</a>
-<a href="https://ctet.nic.in/" target="_blank">📝 CTET</a>
+<div class="sub-folder" onclick="openSub('job-railway')">
+Railway
 </div>
 
-<!-- MahaDBT -->
-<div id="dbt" class="content">
-<h2>🎓 MahaDBT</h2>
-
-<a href="https://mahadbt.maharashtra.gov.in/" target="_blank">🟢 Direct MahaDBT</a>
-<a href="https://mahadbt.maharashtra.gov.in/" target="_blank">🔍 Eligible Schemes</a>
-<a href="https://mahadbt.maharashtra.gov.in/" target="_blank">📊 Application Status</a>
+<div class="sub-folder" onclick="openSub('job-banking')">
+Banking
 </div>
 
-<!-- College -->
-<div id="college" class="content">
-<h2>🎓 महाविद्यालय</h2>
-<div id="college-list"></div>
-<div class="expired-title">⏳ मुदत संपलेले Forms</div>
-<div id="college-expired"></div>
-
-<a href="https://cetcell.mahacet.org/" target="_blank">🎓 Maharashtra CET Cell</a>
+<div class="sub-folder" onclick="openSub('job-other')">
+इतर भरती
 </div>
 
-<!-- Updates -->
-<div id="updates" class="content">
-<h2>📢 Latest Updates</h2>
-<div id="updates-list"></div>
 </div>
 
-<!-- GR -->
-<div id="gr" class="content">
-<h2>📜 सरकारी GR</h2>
-<div id="gr-list"></div>
+<!-- SUB -->
 
-<a href="https://gr.maharashtra.gov.in/" target="_blank">📜 महाराष्ट्र शासन GR</a>
+<div id="job-maha" class="sub-content">
+<h3>महाराष्ट्र सरकार</h3>
+<div id="data-job-maha"></div>
 </div>
+
+<div id="job-central" class="sub-content">
+<h3>केंद्र सरकार</h3>
+<div id="data-job-central"></div>
+</div>
+
+<div id="job-mpsc" class="sub-content">
+<h3>MPSC</h3>
+<div id="data-job-mpsc"></div>
+<a class="direct" href="https://mpsc.gov.in/" target="_blank">🔗 MPSC Official Website</a>
+</div>
+
+<div id="job-upsc" class="sub-content">
+<h3>UPSC</h3>
+<div id="data-job-upsc"></div>
+<a class="direct" href="https://upsc.gov.in/" target="_blank">🔗 UPSC Official Website</a>
+</div>
+
+<div id="job-ssc" class="sub-content">
+<h3>SSC</h3>
+<div id="data-job-ssc"></div>
+<a class="direct" href="https://ssc.gov.in/" target="_blank">🔗 SSC Official Website</a>
+</div>
+
+<div id="job-railway" class="sub-content">
+<h3>Railway</h3>
+<div id="data-job-railway"></div>
+<a class="direct" href="https://www.rrbapply.gov.in/" target="_blank">🔗 Railway Official Portal</a>
+</div>
+
+<div id="job-banking" class="sub-content">
+<h3>Banking</h3>
+<div id="data-job-banking"></div>
+<a class="direct" href="https://www.ibps.in/" target="_blank">🔗 IBPS Official Website</a>
+</div>
+
+<div id="job-other" class="sub-content">
+<h3>इतर भरती</h3>
+<div id="data-job-other"></div>
+</div>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- 2 निकाल -->
+<!-- ================================================= -->
+
+<div id="result" class="main-content">
+
+<div class="main-title">📝 निकाल</div>
+
+<div class="sub-grid">
+
+<div class="sub-folder" onclick="openSub('result-ssc')">SSC</div>
+<div class="sub-folder" onclick="openSub('result-hsc')">HSC</div>
+<div class="sub-folder" onclick="openSub('result-mpsc')">MPSC</div>
+<div class="sub-folder" onclick="openSub('result-upsc')">UPSC</div>
+<div class="sub-folder" onclick="openSub('result-railway')">Railway</div>
+<div class="sub-folder" onclick="openSub('result-bank')">Banking</div>
+<div class="sub-folder" onclick="openSub('result-police')">Police</div>
+<div class="sub-folder" onclick="openSub('result-teacher')">Teacher</div>
+
+</div>
+
+<div id="result-ssc" class="sub-content">
+<h3>SSC निकाल</h3>
+<div id="data-result-ssc"></div>
+<a class="direct result" href="https://mahresult.nic.in/" target="_blank">🏆 Direct Result</a>
+</div>
+
+<div id="result-hsc" class="sub-content">
+<h3>HSC निकाल</h3>
+<div id="data-result-hsc"></div>
+<a class="direct result" href="https://mahresult.nic.in/" target="_blank">🏆 Direct Result</a>
+</div>
+
+<div id="result-mpsc" class="sub-content">
+<h3>MPSC निकाल</h3>
+<div id="data-result-mpsc"></div>
+<a class="direct result" href="https://mpsc.gov.in/" target="_blank">🏆 MPSC Official</a>
+</div>
+
+<div id="result-upsc" class="sub-content">
+<h3>UPSC निकाल</h3>
+<div id="data-result-upsc"></div>
+<a class="direct result" href="https://upsc.gov.in/examinations/results" target="_blank">🏆 Direct Result</a>
+</div>
+
+<div id="result-railway" class="sub-content">
+<h3>Railway निकाल</h3>
+<div id="data-result-railway"></div>
+<a class="direct result" href="https://www.rrbapply.gov.in/" target="_blank">🏆 Railway Portal</a>
+</div>
+
+<div id="result-bank" class="sub-content">
+<h3>Banking निकाल</h3>
+<div id="data-result-bank"></div>
+<a class="direct result" href="https://www.ibps.in/" target="_blank">🏆 IBPS Official</a>
+</div>
+
+<div id="result-police" class="sub-content">
+<h3>Police निकाल</h3>
+<div id="data-result-police"></div>
+<a class="direct result" href="https://www.mahapolice.gov.in/" target="_blank">🏆 Police Official</a>
+</div>
+
+<div id="result-teacher" class="sub-content">
+<h3>Teacher निकाल</h3>
+<div id="data-result-teacher"></div>
+<a class="direct result" href="https://www.mahatet.in/" target="_blank">🏆 MahaTET</a>
+</div>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- 3 ADMIT CARD -->
+<!-- ================================================= -->
+
+<div id="admit" class="main-content">
+
+<div class="main-title">🎫 Admit Card</div>
+
+<div class="sub-grid">
+
+<div class="sub-folder" onclick="openSub('admit-mpsc')">MPSC</div>
+<div class="sub-folder" onclick="openSub('admit-upsc')">UPSC</div>
+<div class="sub-folder" onclick="openSub('admit-ssc')">SSC</div>
+<div class="sub-folder" onclick="openSub('admit-railway')">Railway</div>
+<div class="sub-folder" onclick="openSub('admit-police')">Police</div>
+<div class="sub-folder" onclick="openSub('admit-teacher')">Teacher</div>
+<div class="sub-folder" onclick="openSub('admit-bank')">Banking</div>
+<div class="sub-folder" onclick="openSub('admit-other')">इतर परीक्षा</div>
+
+</div>
+
+<div id="admit-mpsc" class="sub-content">
+<h3>MPSC Admit Card</h3>
+<div id="data-admit-mpsc"></div>
+<a class="direct admit" href="https://mpsc.gov.in/" target="_blank">🎫 Direct MPSC</a>
+</div>
+
+<div id="admit-upsc" class="sub-content">
+<h3>UPSC Admit Card</h3>
+<div id="data-admit-upsc"></div>
+<a class="direct admit" href="https://upsc.gov.in/" target="_blank">🎫 Direct UPSC</a>
+</div>
+
+<div id="admit-ssc" class="sub-content">
+<h3>SSC Admit Card</h3>
+<div id="data-admit-ssc"></div>
+<a class="direct admit" href="https://ssc.gov.in/" target="_blank">🎫 Direct SSC</a>
+</div>
+
+<div id="admit-railway" class="sub-content">
+<h3>Railway Admit Card</h3>
+<div id="data-admit-railway"></div>
+<a class="direct admit" href="https://www.rrbapply.gov.in/" target="_blank">🎫 Direct Railway</a>
+</div>
+
+<div id="admit-police" class="sub-content">
+<h3>Police Admit Card</h3>
+<div id="data-admit-police"></div>
+<a class="direct admit" href="https://www.mahapolice.gov.in/" target="_blank">🎫 Direct Police</a>
+</div>
+
+<div id="admit-teacher" class="sub-content">
+<h3>Teacher Admit Card</h3>
+<div id="data-admit-teacher"></div>
+<a class="direct admit" href="https://www.mahatet.in/" target="_blank">🎫 Direct Teacher</a>
+</div>
+
+<div id="admit-bank" class="sub-content">
+<h3>Banking Admit Card</h3>
+<div id="data-admit-bank"></div>
+<a class="direct admit" href="https://www.ibps.in/" target="_blank">🎫 Direct Banking</a>
+</div>
+
+<div id="admit-other" class="sub-content">
+<h3>इतर परीक्षा</h3>
+<div id="data-admit-other"></div>
+</div>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- 4 POLICE -->
+<!-- ================================================= -->
+
+<div id="police" class="main-content">
+
+<div class="main-title">👮 पोलीस भरती</div>
+
+<div class="sub-grid">
+
+<div class="sub-folder" onclick="openSub('police-shipai')">पोलीस शिपाई</div>
+<div class="sub-folder" onclick="openSub('police-driver')">पोलीस चालक</div>
+<div class="sub-folder" onclick="openSub('police-srpf')">SRPF</div>
+<div class="sub-folder" onclick="openSub('police-notice')">जाहिरात</div>
+<div class="sub-folder" onclick="openSub('police-form')">Form</div>
+<div class="sub-folder" onclick="openSub('police-admit')">Admit Card</div>
+<div class="sub-folder" onclick="openSub('police-result')">Result</div>
+<div class="sub-folder" onclick="openSub('police-merit')">Merit List</div>
+
+</div>
+
+<div id="police-shipai" class="sub-content">
+<h3>पोलीस शिपाई</h3>
+<div id="data-police-shipai"></div>
+</div>
+
+<div id="police-driver" class="sub-content">
+<h3>पोलीस चालक</h3>
+<div id="data-police-driver"></div>
+</div>
+
+<div id="police-srpf" class="sub-content">
+<h3>SRPF</h3>
+<div id="data-police-srpf"></div>
+</div>
+
+<div id="police-notice" class="sub-content">
+<h3>पोलीस भरती जाहिरात</h3>
+<div id="data-police-notice"></div>
+</div>
+
+<div id="police-form" class="sub-content">
+<h3>पोलीस भरती Form</h3>
+<div id="data-police-form"></div>
+</div>
+
+<div id="police-admit" class="sub-content">
+<h3>पोलीस Admit Card</h3>
+<div id="data-police-admit"></div>
+</div>
+
+<div id="police-result" class="sub-content">
+<h3>पोलीस Result</h3>
+<div id="data-police-result"></div>
+</div>
+
+<div id="police-merit" class="sub-content">
+<h3>पोलीस Merit List</h3>
+<div id="data-police-merit"></div>
+</div>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- 5 SCHOOL -->
+<!-- ================================================= -->
+
+<div id="school" class="main-content">
+
+<div class="main-title">🏫 शालेय शिक्षण</div>
+
+<div class="sub-grid">
+
+<div class="sub-folder" onclick="openSub('school-ssc')">SSC</div>
+<div class="sub-folder" onclick="openSub('school-hsc')">HSC</div>
+<div class="sub-folder" onclick="openSub('school-scholarship')">Scholarship</div>
+<div class="sub-folder" onclick="openSub('school-exam')">परीक्षा</div>
+<div class="sub-folder" onclick="openSub('school-result')">निकाल</div>
+<div class="sub-folder" onclick="openSub('school-update')">शैक्षणिक Updates</div>
+
+</div>
+
+<div id="school-ssc" class="sub-content">
+<h3>SSC</h3>
+<div id="data-school-ssc"></div>
+<a class="direct result" href="https://mahresult.nic.in/" target="_blank">🏆 Direct Result</a>
+</div>
+
+<div id="school-hsc" class="sub-content">
+<h3>HSC</h3>
+<div id="data-school-hsc"></div>
+<a class="direct result" href="https://mahresult.nic.in/" target="_blank">🏆 Direct Result</a>
+</div>
+
+<div id="school-scholarship" class="sub-content">
+<h3>Scholarship</h3>
+<div id="data-school-scholarship"></div>
+<a class="direct form" href="https://mahadbt.maharashtra.gov.in/" target="_blank">🟢 Direct Portal</a>
+</div>
+
+<div id="school-exam" class="sub-content">
+<h3>परीक्षा</h3>
+<div id="data-school-exam"></div>
+</div>
+
+<div id="school-result" class="sub-content">
+<h3>शालेय निकाल</h3>
+<div id="data-school-result"></div>
+</div>
+
+<div id="school-update" class="sub-content">
+<h3>शैक्षणिक Updates</h3>
+<div id="data-school-update"></div>
+</div>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- 6 TEACHER -->
+<!-- ================================================= -->
+
+<div id="teacher" class="main-content">
+
+<div class="main-title">👨‍🏫 शिक्षक</div>
+
+<div class="sub-grid">
+
+<div class="sub-folder" onclick="openSub('teacher-bharti')">शिक्षक भरती</div>
+<div class="sub-folder" onclick="openSub('teacher-pavitra')">Pavitra Portal</div>
+<div class="sub-folder" onclick="openSub('teacher-tait')">TAIT</div>
+<div class="sub-folder" onclick="openSub('teacher-tet')">TET</div>
+<div class="sub-folder" onclick="openSub('teacher-ctet')">CTET</div>
+<div class="sub-folder" onclick="openSub('teacher-result')">निकाल</div>
+<div class="sub-folder" onclick="openSub('teacher-merit')">Merit List</div>
+<div class="sub-folder" onclick="openSub('teacher-selection')">Selection List</div>
+
+</div>
+
+<div id="teacher-bharti" class="sub-content">
+<h3>शिक्षक भरती</h3>
+<div id="data-teacher-bharti"></div>
+</div>
+
+<div id="teacher-pavitra" class="sub-content">
+<h3>Pavitra Portal</h3>
+<div id="data-teacher-pavitra"></div>
+</div>
+
+<div id="teacher-tait" class="sub-content">
+<h3>TAIT</h3>
+<div id="data-teacher-tait"></div>
+</div>
+
+<div id="teacher-tet" class="sub-content">
+<h3>TET</h3>
+<div id="data-teacher-tet"></div>
+</div>
+
+<div id="teacher-ctet" class="sub-content">
+<h3>CTET</h3>
+<div id="data-teacher-ctet"></div>
+<a class="direct other" href="https://ctet.nic.in/" target="_blank">🔗 CTET Official</a>
+</div>
+
+<div id="teacher-result" class="sub-content">
+<h3>शिक्षक निकाल</h3>
+<div id="data-teacher-result"></div>
+</div>
+
+<div id="teacher-merit" class="sub-content">
+<h3>Merit List</h3>
+<div id="data-teacher-merit"></div>
+</div>
+
+<div id="teacher-selection" class="sub-content">
+<h3>Selection List</h3>
+<div id="data-teacher-selection"></div>
+</div>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- 7 MAHADBT -->
+<!-- ================================================= -->
+
+<div id="dbt" class="main-content">
+
+<div class="main-title">🎓 MahaDBT</div>
+
+<div class="sub-grid">
+
+<div class="sub-folder" onclick="openSub('dbt-scholarship')">Scholarship</div>
+<div class="sub-folder" onclick="openSub('dbt-scheme')">योजना</div>
+<div class="sub-folder" onclick="openSub('dbt-apply')">अर्ज</div>
+<div class="sub-folder" onclick="openSub('dbt-status')">Application Status</div>
+<div class="sub-folder" onclick="openSub('dbt-eligible')">Eligible Schemes</div>
+<div class="sub-folder" onclick="openSub('dbt-other')">इतर</div>
+
+</div>
+
+<div id="dbt-scholarship" class="sub-content">
+<h3>Scholarship</h3>
+<div id="data-dbt-scholarship"></div>
+<a class="direct form" href="https://mahadbt.maharashtra.gov.in/" target="_blank">🟢 Direct MahaDBT</a>
+</div>
+
+<div id="dbt-scheme" class="sub-content">
+<h3>योजना</h3>
+<div id="data-dbt-scheme"></div>
+<a class="direct other" href="https://mahadbt.maharashtra.gov.in/" target="_blank">🔗 Direct Portal</a>
+</div>
+
+<div id="dbt-apply" class="sub-content">
+<h3>अर्ज</h3>
+<div id="data-dbt-apply"></div>
+<a class="direct form" href="https://mahadbt.maharashtra.gov.in/" target="_blank">🟢 Direct Apply</a>
+</div>
+
+<div id="dbt-status" class="sub-content">
+<h3>Application Status</h3>
+<div id="data-dbt-status"></div>
+<a class="direct other" href="https://mahadbt.maharashtra.gov.in/" target="_blank">📊 Direct Status</a>
+</div>
+
+<div id="dbt-eligible" class="sub-content">
+<h3>Eligible Schemes</h3>
+<div id="data-dbt-eligible"></div>
+<a class="direct other" href="https://mahadbt.maharashtra.gov.in/" target="_blank">🔍 Direct Portal</a>
+</div>
+
+<div id="dbt-other" class="sub-content">
+<h3>इतर MahaDBT माहिती</h3>
+<div id="data-dbt-other"></div>
+</div>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- 8 COLLEGE -->
+<!-- ================================================= -->
+
+<div id="college" class="main-content">
+
+<div class="main-title">🎓 महाविद्यालय</div>
+
+<div class="sub-grid">
+
+<div class="sub-folder" onclick="openSub('college-cet')">CET</div>
+<div class="sub-folder" onclick="openSub('college-admission')">Admission</div>
+<div class="sub-folder" onclick="openSub('college-scholarship')">Scholarship</div>
+<div class="sub-folder" onclick="openSub('college-university')">University</div>
+<div class="sub-folder" onclick="openSub('college-exam')">Exam</div>
+<div class="sub-folder" onclick="openSub('college-result')">Result</div>
+<div class="sub-folder" onclick="openSub('college-merit')">Merit List</div>
+
+</div>
+
+<div id="college-cet" class="sub-content">
+<h3>CET</h3>
+<div id="data-college-cet"></div>
+<a class="direct other" href="https://cetcell.mahacet.org/" target="_blank">🔗 CET Cell</a>
+</div>
+
+<div id="college-admission" class="sub-content">
+<h3>Admission</h3>
+<div id="data-college-admission"></div>
+</div>
+
+<div id="college-scholarship" class="sub-content">
+<h3>Scholarship</h3>
+<div id="data-college-scholarship"></div>
+</div>
+
+<div id="college-university" class="sub-content">
+<h3>University</h3>
+<div id="data-college-university"></div>
+</div>
+
+<div id="college-exam" class="sub-content">
+<h3>Exam</h3>
+<div id="data-college-exam"></div>
+</div>
+
+<div id="college-result" class="sub-content">
+<h3>Result</h3>
+<div id="data-college-result"></div>
+</div>
+
+<div id="college-merit" class="sub-content">
+<h3>Merit List</h3>
+<div id="data-college-merit"></div>
+</div>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- 9 LATEST UPDATES -->
+<!-- ================================================= -->
+
+<div id="updates" class="main-content">
+
+<div class="main-title">📢 Latest Updates</div>
+
+<div class="sub-grid">
+
+<div class="sub-folder" onclick="openSub('updates-job')">नवीन जाहिराती</div>
+<div class="sub-folder" onclick="openSub('updates-form')">नवीन Forms</div>
+<div class="sub-folder" onclick="openSub('updates-result')">नवीन Results</div>
+<div class="sub-folder" onclick="openSub('updates-admit')">नवीन Admit Cards</div>
+<div class="sub-folder" onclick="openSub('updates-news')">महत्त्वाच्या बातम्या</div>
+
+</div>
+
+<div id="updates-job" class="sub-content">
+<h3>नवीन जाहिराती</h3>
+<div id="data-updates-job"></div>
+</div>
+
+<div id="updates-form" class="sub-content">
+<h3>नवीन Forms</h3>
+<div id="data-updates-form"></div>
+</div>
+
+<div id="updates-result" class="sub-content">
+<h3>नवीन Results</h3>
+<div id="data-updates-result"></div>
+</div>
+
+<div id="updates-admit" class="sub-content">
+<h3>नवीन Admit Cards</h3>
+<div id="data-updates-admit"></div>
+</div>
+
+<div id="updates-news" class="sub-content">
+<h3>महत्त्वाच्या बातम्या</h3>
+<div id="data-updates-news"></div>
+</div>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- 10 GR -->
+<!-- ================================================= -->
+
+<div id="gr" class="main-content">
+
+<div class="main-title">📜 सरकारी GR</div>
+
+<div class="sub-grid">
+
+<div class="sub-folder" onclick="openSub('gr-school')">शालेय शिक्षण GR</div>
+<div class="sub-folder" onclick="openSub('gr-teacher')">शिक्षक GR</div>
+<div class="sub-folder" onclick="openSub('gr-rural')">ग्रामविकास GR</div>
+<div class="sub-folder" onclick="openSub('gr-general')">सामान्य प्रशासन GR</div>
+<div class="sub-folder" onclick="openSub('gr-new')">नवीन GR</div>
+<div class="sub-folder" onclick="openSub('gr-pdf')">GR PDF</div>
+
+</div>
+
+<div id="gr-school" class="sub-content">
+<h3>शालेय शिक्षण GR</h3>
+<div id="data-gr-school"></div>
+<a class="direct other" href="https://gr.maharashtra.gov.in/" target="_blank">📜 Direct GR</a>
+</div>
+
+<div id="gr-teacher" class="sub-content">
+<h3>शिक्षक GR</h3>
+<div id="data-gr-teacher"></div>
+<a class="direct other" href="https://gr.maharashtra.gov.in/" target="_blank">📜 Direct GR</a>
+</div>
+
+<div id="gr-rural" class="sub-content">
+<h3>ग्रामविकास GR</h3>
+<div id="data-gr-rural"></div>
+<a class="direct other" href="https://gr.maharashtra.gov.in/" target="_blank">📜 Direct GR</a>
+</div>
+
+<div id="gr-general" class="sub-content">
+<h3>सामान्य प्रशासन GR</h3>
+<div id="data-gr-general"></div>
+<a class="direct other" href="https://gr.maharashtra.gov.in/" target="_blank">📜 Direct GR</a>
+</div>
+
+<div id="gr-new" class="sub-content">
+<h3>नवीन GR</h3>
+<div id="data-gr-new"></div>
+<a class="direct other" href="https://gr.maharashtra.gov.in/" target="_blank">📜 Direct GR</a>
+</div>
+
+<div id="gr-pdf" class="sub-content">
+<h3>GR PDF</h3>
+<div id="data-gr-pdf"></div>
+</div>
+
+</div>
+
 
 <div class="contact">
-<h2>📞 संपर्क</h2>
+<h3>📞 संपर्क</h3>
 <a href="tel:8408088784">📞 8408088784</a>
 <a href="https://wa.me/918408088784" target="_blank">💬 WhatsApp</a>
 </div>
 
 </div>
 
-<footer>© 2026 Maha Shiv</footer>
+<footer>
+© 2026 Maha Shiv
+</footer>
+
 
 <script>
 
-/*
-  VERIFIED DATA इथे भरा.
+/* =====================================================
+   येथे फक्त VERIFIED माहिती टाकायची आहे.
 
-  date = YYYY-MM-DD
+   category:
+   job / result / admit / police / school /
+   teacher / dbt / college / updates / gr
 
-  तारीख संपल्यावर Form आपोआप
-  "मुदत संपलेले Forms" मध्ये जाईल.
-*/
+   sub:
+   त्या folder चा sub-main id
 
-const forms = [
+   start:
+   Form सुरू तारीख
+
+   end:
+   Form शेवटची तारीख
+
+   notice:
+   Direct जाहिरात
+
+   form:
+   Direct Form
+
+   admit:
+   Direct Admit Card
+
+   result:
+   Direct Result
+
+   merit:
+   Direct Merit List
+
+   other:
+   इतर Direct Link
+===================================================== */
+
+const DATA = [
 
 /*
 {
  category:"job",
+ sub:"mpsc",
  post:"पदाचे नाव",
  start:"2026-08-15",
  end:"2026-08-30",
- form:"https://official-link",
- result:"",
- admit:"",
- other:""
+ notice:"OFFICIAL NOTICE LINK",
+ form:"OFFICIAL FORM LINK",
+ admit:"OFFICIAL ADMIT CARD LINK",
+ result:"OFFICIAL RESULT LINK",
+ merit:"OFFICIAL MERIT LINK",
+ other:"OFFICIAL OTHER LINK"
 }
 */
 
 ];
 
-const results = [
 
-/*
-{
- post:"पदाचे नाव",
- date:"2026-08-20",
- link:"https://official-result-link"
-}
-*/
+/* तारीख */
 
-];
+function formatDate(value){
 
-function dateText(value){
- if(!value) return "—";
- const d=new Date(value+"T00:00:00");
- if(isNaN(d)) return "—";
- return d.toLocaleDateString("mr-IN");
-}
+  if(!value) return "—";
 
-function formCard(x,expired=false){
+  const d = new Date(value + "T00:00:00");
 
- const d=document.createElement("div");
- d.className="card"+(expired?" expired":"");
+  if(isNaN(d)) return "—";
 
- d.innerHTML=`
- <div class="post">🔴 ${x.post}</div>
- <div class="date">📅 Form सुरू: ${dateText(x.start)}</div>
- <div class="date end">⏰ Form शेवट: ${dateText(x.end)}</div>
-
- ${x.form ? `<a class="btn form" href="${x.form}" target="_blank">🟢 Direct Form</a>`:""}
-
- ${x.result ? `<a class="btn result" href="${x.result}" target="_blank">🏆 ${x.post} — Direct Result</a>`:""}
-
- ${x.admit ? `<a class="btn admit" href="${x.admit}" target="_blank">🎫 Direct Admit Card</a>`:""}
-
- ${x.other ? `<a class="btn other" href="${x.other}" target="_blank">📋 इतर माहिती</a>`:""}
- `;
-
- return d;
+  return d.toLocaleDateString("mr-IN",{
+    day:"2-digit",
+    month:"2-digit",
+    year:"numeric"
+  });
 }
 
-function loadForms(){
 
- const today=new Date();
- today.setHours(23,59,59,999);
+/* CARD */
 
- forms.forEach(x=>{
+function createCard(x,expired){
 
-   const end=new Date(x.end+"T23:59:59");
+  const card=document.createElement("div");
 
-   let box;
+  card.className="info-card";
 
-   if(end < today){
-      box=document.getElementById(x.category+"-expired");
-      if(box) box.appendChild(formCard(x,true));
-   }else{
-      box=document.getElementById(x.category+"-list");
-      if(box) box.appendChild(formCard(x,false));
-   }
+  if(expired){
+    card.style.borderLeftColor="#777";
+  }
 
- });
+  card.innerHTML=`
+
+    <div class="post">
+      🔴 ${x.post || "माहिती"}
+    </div>
+
+    ${
+      x.start
+      ?
+      `<div class="date start">
+        📅 Form सुरू: ${formatDate(x.start)}
+      </div>`
+      :
+      ""
+    }
+
+    ${
+      x.end
+      ?
+      `<div class="date end">
+        ⏰ Form शेवट: ${formatDate(x.end)}
+      </div>`
+      :
+      ""
+    }
+
+    ${
+      x.notice
+      ?
+      `<a class="direct notice"
+         href="${x.notice}"
+         target="_blank">
+         📢 Direct जाहिरात
+       </a>`
+      :
+      ""
+    }
+
+    ${
+      x.form
+      ?
+      `<a class="direct form"
+         href="${x.form}"
+         target="_blank">
+         🟢 Direct Form
+       </a>`
+      :
+      ""
+    }
+
+    ${
+      x.admit
+      ?
+      `<a class="direct admit"
+         href="${x.admit}"
+         target="_blank">
+         🎫 Direct Admit Card
+       </a>`
+      :
+      ""
+    }
+
+    ${
+      x.result
+      ?
+      `<a class="direct result"
+         href="${x.result}"
+         target="_blank">
+         🏆 ${x.post || "पद"} — Direct Result
+       </a>`
+      :
+      ""
+    }
+
+    ${
+      x.merit
+      ?
+      `<a class="direct merit"
+         href="${x.merit}"
+         target="_blank">
+         📋 Direct Merit List
+       </a>`
+      :
+      ""
+    }
+
+    ${
+      x.other
+      ?
+      `<a class="direct other"
+         href="${x.other}"
+         target="_blank">
+         🔗 Direct इतर माहिती
+       </a>`
+      :
+      ""
+    }
+
+  `;
+
+  return card;
 }
 
-function loadResults(){
 
- const box=document.getElementById("result-list");
+/* DATA LOAD */
 
- results.forEach(x=>{
+function loadData(){
 
-   const d=document.createElement("div");
+  DATA.forEach(x=>{
 
-   d.className="card";
+    const box =
+      document.getElementById(
+        "data-" + x.category + "-" + x.sub
+      );
 
-   d.innerHTML=`
-   <div class="post">🏆 ${x.post} — निकाल</div>
-   <div class="date">📅 निकाल तारीख: ${dateText(x.date)}</div>
-   <a class="btn result" href="${x.link}" target="_blank">
-   🏆 Direct Result
-   </a>
-   `;
+    if(!box) return;
 
-   box.appendChild(d);
+    const today = new Date();
 
- });
+    today.setHours(23,59,59,999);
+
+    let expired=false;
+
+    if(x.end){
+
+      const end =
+        new Date(x.end + "T23:59:59");
+
+      if(end < today){
+        expired=true;
+      }
+
+    }
+
+    box.appendChild(
+      createCard(x,expired)
+    );
+
+  });
+
 }
 
-function openFolder(id){
 
- document.querySelectorAll(".content")
- .forEach(x=>x.classList.remove("active"));
+/* MAIN OPEN */
 
- const x=document.getElementById(id);
+function openMain(id){
 
- if(x){
-   x.classList.add("active");
-   x.scrollIntoView({behavior:"smooth"});
- }
+  document
+  .querySelectorAll(".main-content")
+  .forEach(x=>{
+    x.classList.remove("active");
+  });
+
+  document
+  .querySelectorAll(".sub-content")
+  .forEach(x=>{
+    x.classList.remove("active");
+  });
+
+  const box=document.getElementById(id);
+
+  if(box){
+
+    box.classList.add("active");
+
+    box.scrollIntoView({
+      behavior:"smooth",
+      block:"start"
+    });
+
+  }
+
 }
 
-loadForms();
-loadResults();
+
+/* SUB OPEN */
+
+function openSub(id){
+
+  document
+  .querySelectorAll(".sub-content")
+  .forEach(x=>{
+    x.classList.remove("active");
+  });
+
+  const box=document.getElementById(id);
+
+  if(box){
+
+    box.classList.add("active");
+
+    box.scrollIntoView({
+      behavior:"smooth",
+      block:"start"
+    });
+
+  }
+
+}
+
+
+/* START */
+
+loadData();
 
 </script>
 
 </body>
-  </html>
+ </html>
