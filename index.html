@@ -1,126 +1,277 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="mr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maha Shiv - Education Jobs Results Updates</title>
 
-  <title>Maha Shiv | Education, Jobs & Results</title>
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:Arial,sans-serif;
+}
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+html{
+  scroll-behavior:smooth;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f3ff;
-      color: #222;
-    }
+body{
+  background:#f4f7fb;
+  color:#222;
+}
 
-    header {
-      background: linear-gradient(135deg, #6a1b9a, #8e24aa);
-      color: white;
-      padding: 30px 18px;
-      text-align: center;
-    }
+header{
+  background:linear-gradient(135deg,#6a11cb,#2575fc);
+  color:white;
+  text-align:center;
+  padding:28px 15px;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 34px;
-    }
+header h1{
+  font-size:30px;
+  margin-bottom:8px;
+}
 
-    header p {
-      margin: 10px 0 0;
-      font-size: 16px;
-    }
+header p{
+  font-size:16px;
+}
 
-    nav {
-      background: white;
-      padding: 12px;
-      text-align: center;
-      box-shadow: 0 2px 8px #ddd;
-      position: sticky;
-      top: 0;
-    }
+nav{
+  background:#111827;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:8px;
+  padding:12px;
+  position:sticky;
+  top:0;
+  z-index:10;
+}
 
-    nav a {
-      color: #6a1b9a;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 0 8px;
-    }
+nav a{
+  color:white;
+  text-decoration:none;
+  padding:10px 14px;
+  border-radius:8px;
+  background:#374151;
+  font-weight:bold;
+}
 
-    .hero {
-      text-align: center;
-      padding: 35px 18px;
-    }
+nav a:hover{
+  background:#2563eb;
+}
 
-    .hero h2 {
-      color: #6a1b9a;
-      font-size: 27px;
-    }
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
 
-    .hero p {
-      font-size: 17px;
-      line-height: 1.6;
-    }
+.hero{
+  background:white;
+  padding:30px 20px;
+  border-radius:15px;
+  margin-bottom:25px;
+  box-shadow:0 3px 12px #0001;
+  text-align:center;
+}
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 15px;
-    }
+.hero h2{
+  color:#2563eb;
+  margin-bottom:10px;
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-    }
+section{
+  background:white;
+  padding:22px;
+  border-radius:15px;
+  margin-bottom:25px;
+  box-shadow:0 3px 12px #0001;
+}
 
-    .card {
-      background: white;
-      padding: 22px;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px #ddd;
-      text-align: center;
-    }
+section h2{
+  color:#1d4ed8;
+  margin-bottom:18px;
+  border-bottom:2px solid #e5e7eb;
+  padding-bottom:10px;
+}
 
-    .card h3 {
-      color: #6a1b9a;
-      font-size: 22px;
-    }
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:14px;
+}
 
-    .card p {
-      line-height: 1.5;
-    }
+.card{
+  background:#f8fafc;
+  border:1px solid #e5e7eb;
+  border-radius:12px;
+  padding:15px;
+}
 
-    .btn {
-      display: inline-block;
-      background: #6a1b9a;
-      color: white;
-      padding: 10px 18px;
-      border-radius: 25px;
-      text-decoration: none;
-      margin-top: 8px;
-    }
+.card h3{
+  font-size:18px;
+  margin-bottom:8px;
+}
 
-    .updates {
-      margin-top: 30px;
-      background: white;
-      padding: 22px;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px #ddd;
-    }
+.card p{
+  color:#555;
+  font-size:14px;
+  margin-bottom:12px;
+}
 
-    footer {
-      margin-top: 35px;
-      background: #4a148c;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-  </style>
+.btn{
+  display:inline-block;
+  background:#2563eb;
+  color:white;
+  text-decoration:none;
+  padding:9px 14px;
+  border-radius:8px;
+  font-weight:bold;
+}
+
+.btn:hover{
+  background:#1d4ed8;
+}
+
+.education .card{
+  border-left:5px solid #2563eb;
+}
+
+.jobs .card{
+  border-left:5px solid #16a34a;
+}
+
+.results .card{
+  border-left:5px solid #f59e0b;
+}
+
+.updates .card{
+  border-left:5px solid #9333ea;
+}
+
+.contact-info{
+  line-height:2;
+  margin-bottom:20px;
+}
+
+.contact-info a{
+  color:#2563eb;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.contact-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:15px;
+}
+
+.whatsapp{
+  background:#16a34a;
+}
+
+.whatsapp:hover{
+  background:#15803d;
+}
+
+.email{
+  background:#dc2626;
+}
+
+.email:hover{
+  background:#b91c1c;
+}
+
+.call{
+  background:#2563eb;
+}
+
+form{
+  display:grid;
+  gap:12px;
+  margin-top:20px;
+}
+
+input,textarea{
+  width:100%;
+  padding:12px;
+  border:1px solid #ccc;
+  border-radius:8px;
+  font-size:15px;
+}
+
+textarea{
+  min-height:120px;
+  resize:vertical;
+}
+
+button{
+  background:#2563eb;
+  color:white;
+  border:0;
+  padding:12px;
+  border-radius:8px;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#1d4ed8;
+}
+
+.visit{
+  text-align:center;
+  background:#111827;
+  color:white;
+}
+
+.visit h2{
+  color:white;
+}
+
+#counter{
+  font-size:30px;
+  font-weight:bold;
+  color:#60a5fa;
+  margin-top:10px;
+}
+
+footer{
+  background:#111827;
+  color:white;
+  text-align:center;
+  padding:25px 15px;
+}
+
+@media(max-width:600px){
+
+  header h1{
+    font-size:24px;
+  }
+
+  nav a{
+    font-size:13px;
+    padding:8px 10px;
+  }
+
+  .container{
+    padding:12px;
+  }
+
+  .contact-buttons{
+    flex-direction:column;
+  }
+
+  .contact-buttons .btn{
+    text-align:center;
+  }
+}
+</style>
 </head>
 
 <body>
@@ -131,89 +282,412 @@
 </header>
 
 <nav>
-  <a href="#education">Education</a>
-  <a href="#jobs">Jobs</a>
-  <a href="#results">Results</a>
-  <a href="#updates">Updates</a>
+  <a href="#home">🏠 Home</a>
+  <a href="#education">📚 Education</a>
+  <a href="#jobs">💼 Jobs</a>
+  <a href="#results">📝 Results</a>
+  <a href="#updates">📢 Updates</a>
+  <a href="#contact">📞 Contact</a>
 </nav>
-
-<section class="hero">
-  <h2>Welcome to Maha Shiv</h2>
-  <p>
-    तुमच्यासाठी Education, Government Jobs, Exam Results
-    आणि Latest Updates एकाच ठिकाणी.
-  </p>
-</section>
 
 <div class="container">
 
-  <div class="cards">
+<!-- HOME -->
 
-    <div class="card" id="education">
-      <h3>📚 Education</h3>
-      <p>शिक्षण, परीक्षा, अभ्यास आणि शैक्षणिक बातम्यांचे अपडेट्स.</p>
-      <a class="btn" href="#">View Updates</a>
-    </div>
+<section id="home" class="hero">
+  <h2>Welcome to Maha Shiv</h2>
 
-    <div class="card" id="jobs">
-      <h3>💼 Government Jobs</h3>
-      <p>सरकारी नोकरी, भरती, जाहिराती आणि अर्जाच्या तारखा.</p>
-      <a class="btn" href="#">View Jobs</a>
-    </div>
+  <p>
+    तुमच्यासाठी Education, Government Jobs,
+    Exam Results आणि Latest Updates एकाच ठिकाणी.
+  </p>
+</section>
 
-    <div class="card" id="results">
-      <h3>📝 Results</h3>
-      <p>परीक्षा निकाल आणि महत्वाच्या Result Updates.</p>
-      <a class="btn" href="#">View Results</a>
-    </div>
 
-    <div class="card" id="updates">
-      <h3>🔔 Latest Updates</h3>
-      <p>Education आणि Career संबंधित नवीन माहिती.</p>
-      <a class="btn" href="#">Latest News</a>
-    </div>
+<!-- EDUCATION -->
 
-  </div>
+<section id="education" class="education">
 
-  <div class="updates">
-    <h2>📢 Important Notice</h2>
-    <p>
-      Maha Shiv वर नवीन Education, Jobs आणि Results Updates
-      नियमितपणे प्रकाशित केले जातील.
-    </p>
-  </div>
+<h2>📚 Education - शिक्षण</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>📝 Maha TET</h3>
+<p>महाराष्ट्र शिक्षक पात्रता परीक्षा</p>
+<a class="btn" href="https://mahatet.in/" target="_blank">Visit</a>
+</div>
+
+<div class="card">
+<h3>📝 CTET</h3>
+<p>Central Teacher Eligibility Test</p>
+<a class="btn" href="https://ctet.nic.in/" target="_blank">Visit</a>
+</div>
+
+<div class="card">
+<h3>🎓 MahaDBT Scholarship</h3>
+<p>महाराष्ट्र शासन शिष्यवृत्ती</p>
+<a class="btn" href="https://mahadbt.maharashtra.gov.in/" target="_blank">Visit</a>
+</div>
+
+<div class="card">
+<h3>🎓 National Scholarship Portal</h3>
+<p>केंद्र शासन शिष्यवृत्ती</p>
+<a class="btn" href="https://scholarships.gov.in/" target="_blank">Visit</a>
+</div>
+
+<div class="card">
+<h3>📘 Maharashtra Board</h3>
+<p>SSC आणि HSC बोर्ड</p>
+<a class="btn" href="https://mahahsscboard.in/" target="_blank">Visit</a>
+</div>
+
+<div class="card">
+<h3>📖 e-Balbharati</h3>
+<p>पाठ्यपुस्तके आणि शैक्षणिक साहित्य</p>
+<a class="btn" href="https://ebalbharati.in/" target="_blank">Visit</a>
+</div>
+
+<div class="card">
+<h3>🏫 SCERT Maharashtra</h3>
+<p>शैक्षणिक संशोधन व प्रशिक्षण</p>
+<a class="btn" href="https://www.maa.ac.in/" target="_blank">Visit</a>
+</div>
+
+<div class="card">
+<h3>💻 DIKSHA</h3>
+<p>Digital Education Platform</p>
+<a class="btn" href="https://diksha.gov.in/" target="_blank">Visit</a>
+</div>
+
+<div class="card">
+<h3>📗 NCERT</h3>
+<p>National Council of Educational Research</p>
+<a class="btn" href="https://ncert.nic.in/" target="_blank">Visit</a>
+</div>
+
+<div class="card">
+<h3>🎓 UGC</h3>
+<p>University Grants Commission</p>
+<a class="btn" href="https://www.ugc.gov.in/" target="_blank">Visit</a>
+</div>
+
+<div class="card">
+<h3>📝 NTA</h3>
+<p>National Testing Agency</p>
+<a class="btn" href="https://www.nta.ac.in/" target="_blank">Visit</a>
+</div>
+
+<div class="card">
+<h3>🏫 Maharashtra Education</h3>
+<p>शालेय शिक्षण विभाग</p>
+<a class="btn" href="https://education.maharashtra.gov.in/" target="_blank">Visit</a>
+</div>
+
+</div>
+</section>
+
+
+<!-- JOBS -->
+
+<section id="jobs" class="jobs">
+
+<h2>💼 Jobs - सरकारी नोकरी</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>🏛️ MPSC</h3>
+<p>महाराष्ट्र लोकसेवा आयोग</p>
+<a class="btn" href="https://www.mpsc.gov.in/" target="_blank">Visit</a>
+</div>
+
+<div class="card">
+<h3>🇮🇳 UPSC</h3>
+<p>Union Public Service Commission</p>
+<a class="btn" href="https://upsc.gov.in/" target="_blank">Visit</a>
+</div>
+
+<div class="card">
+<h3>👨‍🏫 शिक्षक भरती</h3>
+<p>शिक्षक भरती माहिती</p>
+<a class="btn" href="https://edustaff.maharashtra.gov.in/" target="_blank">Visit</a>
+</div>
+
+<div class="card">
+<h3>👮 Police Recruitment</h3>
+<p>महाराष्ट्र पोलीस भरती</p>
+<a class="btn" href="https://www.mahapolice.gov.in/" target="_blank">Visit</a>
+</div>
+
+<div class="card">
+<h3>🏥 आरोग्य विभाग</h3>
+<p>आरोग्य विभाग भरती</p>
+<a class="btn" href="https://arogya.maharashtra.gov.in/" target="_blank">Visit</a>
+</div>
+
+<div class="card">
+<h3>🏢 महाराष्ट्र शासन</h3>
+<p>शासकीय विभाग आणि भरती</p>
+<a class="btn" href="https://www.maharashtra.gov.in/" target="_blank">Visit</a>
+</div>
+
+</div>
+</section>
+
+
+<!-- RESULTS -->
+
+<section id="results" class="results">
+
+<h2>📝 Results - निकाल</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>📘 SSC Result</h3>
+<p>दहावी निकाल</p>
+<a class="btn" href="https://mahresult.nic.in/" target="_blank">Result</a>
+</div>
+
+<div class="card">
+<h3>📕 HSC Result</h3>
+<p>बारावी निकाल</p>
+<a class="btn" href="https://mahresult.nic.in/" target="_blank">Result</a>
+</div>
+
+<div class="card">
+<h3>📝 Maha TET Result</h3>
+<p>शिक्षक पात्रता परीक्षा निकाल</p>
+<a class="btn" href="https://mahatet.in/" target="_blank">Result</a>
+</div>
+
+<div class="card">
+<h3>📝 CTET Result</h3>
+<p>केंद्रीय शिक्षक पात्रता परीक्षा निकाल</p>
+<a class="btn" href="https://ctet.nic.in/" target="_blank">Result</a>
+</div>
+
+<div class="card">
+<h3>🏛️ MPSC Result</h3>
+<p>महाराष्ट्र लोकसेवा आयोग निकाल</p>
+<a class="btn" href="https://www.mpsc.gov.in/" target="_blank">Result</a>
+</div>
+
+<div class="card">
+<h3>🎓 University Results</h3>
+<p>विद्यापीठ परीक्षा निकाल</p>
+<a class="btn" href="https://results.gov.in/" target="_blank">Result</a>
+</div>
+
+</div>
+</section>
+
+
+<!-- UPDATES -->
+
+<section id="updates" class="updates">
+
+<h2>📢 Latest Updates - ताज्या अपडेट्स</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>📢 Government GR</h3>
+<p>महाराष्ट्र शासनाचे शासन निर्णय</p>
+<a class="btn" href="https://gr.maharashtra.gov.in/" target="_blank">
+View Updates
+</a>
+</div>
+
+<div class="card">
+<h3>💼 Job Updates</h3>
+<p>नवीन सरकारी नोकरी जाहिराती</p>
+<a class="btn" href="#jobs">View Jobs</a>
+</div>
+
+<div class="card">
+<h3>📝 Exam Updates</h3>
+<p>परीक्षा अर्ज, वेळापत्रक आणि सूचना</p>
+<a class="btn" href="#education">View Exams</a>
+</div>
+
+<div class="card">
+<h3>🎓 Scholarship Updates</h3>
+<p>शिष्यवृत्ती अर्ज व नवीन सूचना</p>
+<a class="btn" href="#education">View Scholarship</a>
+</div>
+
+<div class="card">
+<h3>📋 Admit Card</h3>
+<p>प्रवेशपत्र आणि परीक्षा सूचना</p>
+<a class="btn" href="#education">View</a>
+</div>
+
+<div class="card">
+<h3>📊 Answer Key</h3>
+<p>परीक्षांच्या उत्तरतालिका</p>
+<a class="btn" href="#results">View</a>
+</div>
+
+</div>
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2>📞 Contact Us</h2>
+
+<div class="contact-info">
+
+<p>तुमच्या सूचना, प्रश्न किंवा माहिती आमच्यापर्यंत पाठवा.</p>
+
+<p>
+📞 <b>Mobile:</b>
+<a href="tel:8408088784">8408088784</a>
+</p>
+
+<p>
+📧 <b>Email:</b>
+<a href="mailto:shivshankarphupate@gmail.com">
+shivshankarphupate@gmail.com
+</a>
+</p>
+
+<p>
+💬 <b>WhatsApp:</b>
+<a href="https://wa.me/918408088784" target="_blank">
+8408088784
+</a>
+</p>
+
+<div class="contact-buttons">
+
+<a class="btn call" href="tel:8408088784">
+📞 Call Now
+</a>
+
+<a class="btn whatsapp"
+href="https://wa.me/918408088784"
+target="_blank">
+💬 WhatsApp
+</a>
+
+<a class="btn email"
+href="mailto:shivshankarphupate@gmail.com">
+📧 Send Email
+</a>
 
 </div>
 
+</div>
+
+
+<form onsubmit="sendMessage(event)">
+
+<input
+type="text"
+id="name"
+placeholder="तुमचे नाव"
+required
+>
+
+<input
+type="email"
+id="email"
+placeholder="तुमचा Email"
+required
+>
+
+<textarea
+id="message"
+placeholder="तुमचा संदेश"
+required
+></textarea>
+
+<button type="submit">
+📩 Send Message
+</button>
+
+</form>
+
+</section>
+
+
+<!-- VISIT COUNTER -->
+
+<section class="visit">
+
+<h2>👁️ Website Visits</h2>
+
+<p>आपल्या साइटला भेट दिल्याबद्दल धन्यवाद!</p>
+
+<p id="counter">0</p>
+
+<p>Visits</p>
+
+</section>
+
+</div>
+
+
 <footer>
-  <p>© 2026 Maha Shiv</p>
-  <p>Education • Jobs • Results • Updates</p>
+
+<p>
+🌟 <b>Maha Shiv</b>
+— Education • Jobs • Results • Updates
+</p>
+
+<p>
+📞 8408088784 |
+📧 shivshankarphupate@gmail.com
+</p>
+
+<p>
+© 2026 Maha Shiv. All Rights Reserved.
+</p>
+
 </footer>
 
-<section id="contact" style="padding:30px;text-align:center;background:#f5f3ff;">
-  <h2>📞 Contact Us</h2>
-  <p>तुमच्या प्रश्नांसाठी आमच्याशी संपर्क करा.</p>
 
-  <p>📱 WhatsApp</p>
-  <p>📧 Email</p>
+<script>
 
-  <form>
-    <input type="text" placeholder="तुमचे नाव" required><br><br>
-    <input type="email" placeholder="तुमचा Email" required><br><br>
-    <textarea placeholder="तुमचा Message" rows="5" required></textarea><br><br>
-    <button type="submit">Send Message</button>
-  </form>
-</section> <section id="contact" style="padding:30px;text-align:center;background:#f5f3ff;">
-  <h2>📞 Contact Us</h2>
-  <p>तुमच्या प्रश्नांसाठी आमच्याशी संपर्क करा.</p>8408088784
-  <form>
-    <input type="text" placeholder="shivshankarphupate" required><br><br>
+// VISIT COUNTER
 
-    <input type="email" placeholder="shivshankarphupate@gmail.com" required><br><br>
+let visits = localStorage.getItem("mahaShivVisits");
 
-    <textarea placeholder="तुमचा Message" rows="5" required></textarea><br><br>
+if(!visits){
+  visits = 1;
+}
+else{
+  visits = Number(visits) + 1;
+}
 
-    <button type="submit">Send Message</button>
-  </form>
-</section></body>
+localStorage.setItem("mahaShivVisits", visits);
+
+document.getElementById("counter").innerText = visits;
+
+
+// CONTACT FORM
+
+function sendMessage(event){
+
+  event.preventDefault();
+
+  let name =
+    document.getElementById("name").value;
+
+  alert(
+    "धन्यवाद " +
+    name +
+    "! तुमचा संदेश प्राप्त झाला."
+  );
+
+}
+
+</script>
+
+</body>
 </html>
