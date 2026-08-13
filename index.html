@@ -4,10 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Maha Shiv | Education Jobs Results Updates</title>
-
-<meta name="description"
-content="Maha Shiv - सरकारी नोकरी, निकाल, Admit Card, शालेय शिक्षण, शिक्षक, पोलीस भरती, MahaDBT, महाविद्यालय, सरकारी GR आणि Latest Updates">
+<title>Maha Shiv | Jobs Results Education Updates</title>
 
 <style>
 *{
@@ -18,129 +15,203 @@ content="Maha Shiv - सरकारी नोकरी, निकाल, Admit 
 
 body{
   font-family:Arial,"Noto Sans Devanagari",sans-serif;
-  background:#f3f6fb;
-  color:#222;
+  min-height:100vh;
+
+  background-image:
+  linear-gradient(rgba(255,255,255,.72),rgba(255,255,255,.72)),
+  url("https://drive.google.com/uc?export=view&id=1WnnJCRvv8b-sX8fU74isiCDjy9rI3p5z");
+
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
 }
 
+/* HEADER */
 header{
-  background:linear-gradient(135deg,#123d91,#287bd5);
-  color:white;
   text-align:center;
-  padding:30px 15px;
+  padding:20px 10px;
+  background:rgba(0,65,145,.90);
+  color:white;
 }
 
 header h1{
-  font-size:34px;
-  margin-bottom:8px;
+  font-size:29px;
+  text-shadow:0 0 8px white;
 }
 
 header p{
-  font-size:16px;
+  font-size:14px;
+  margin-top:5px;
 }
 
+/* HOME */
 .container{
-  max-width:900px;
-  margin:25px auto;
-  padding:0 14px;
+  max-width:650px;
+  margin:18px auto;
+  padding:0 10px;
 }
 
 .welcome{
-  background:white;
-  padding:22px;
-  border-radius:18px;
   text-align:center;
-  margin-bottom:20px;
-  box-shadow:0 3px 15px rgba(0,0,0,.10);
+  background:rgba(255,255,255,.90);
+  border-radius:14px;
+  padding:14px;
+  margin-bottom:12px;
 }
 
 .welcome h2{
-  margin-bottom:8px;
+  font-size:20px;
+}
+
+/* FOLDERS */
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:9px;
 }
 
 .folder{
-  background:white;
-  border-radius:16px;
-  margin:13px 0;
-  overflow:hidden;
-  box-shadow:0 3px 12px rgba(0,0,0,.09);
-}
+  min-height:62px;
+  border-radius:12px;
+  background:rgba(255,255,255,.84);
+  border:1px solid white;
+  box-shadow:0 3px 9px rgba(0,0,0,.18);
 
-.folder-title{
-  width:100%;
-  border:0;
-  background:white;
-  padding:19px;
-  text-align:left;
-  font-size:19px;
-  font-weight:bold;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+
   cursor:pointer;
+  transition:.3s;
 }
 
-.folder-title:hover{
-  background:#f0f5ff;
+.folder:hover{
+  transform:scale(1.04);
 }
 
-.links{
+/* चमकणारे नाव */
+.folder span{
+  font-size:15px;
+  font-weight:bold;
+
+  animation:glow 1.7s infinite alternate;
+}
+
+@keyframes glow{
+  from{
+    text-shadow:
+      0 0 3px white,
+      0 0 6px #00aaff;
+  }
+
+  to{
+    text-shadow:
+      0 0 5px white,
+      0 0 12px #0066ff,
+      0 0 18px #00ccff;
+  }
+}
+
+/* CONTENT */
+.content{
   display:none;
-  padding:0 15px 16px;
+  margin-top:12px;
+  background:rgba(255,255,255,.96);
+  border-radius:14px;
+  padding:12px;
 }
 
-.links a{
+.content.active{
+  display:block;
+}
+
+.content h2{
+  text-align:center;
+  font-size:20px;
+  margin-bottom:10px;
+}
+
+/* LINKS */
+.content a{
   display:block;
   text-decoration:none;
-  background:#f4f7fb;
-  color:#164aa0;
-  padding:13px;
-  margin-top:9px;
-  border-radius:10px;
-  font-weight:600;
+  color:#064ca8;
+  background:#eef5ff;
+  padding:10px;
+  margin:7px 0;
+  border-radius:8px;
+  font-weight:bold;
 }
 
-.links a:hover{
-  background:#e3efff;
+/* HEADLINE */
+.headline-box{
+  background:#fff0f0;
+  border:2px solid #ff4444;
+  border-radius:11px;
+  padding:11px;
+  margin-bottom:10px;
 }
 
-/* नवीन Headline */
-.headline{
-  display:block !important;
-  background:#fff1f1 !important;
-  color:#d40000 !important;
-  border:2px solid #ff4b4b;
-  font-weight:bold !important;
-  font-size:16px;
+.headline-title{
+  color:#d00000;
+  font-size:17px;
+  font-weight:bold;
+  margin-bottom:7px;
 }
 
-.contact{
-  background:white;
-  padding:23px;
-  border-radius:18px;
-  margin-top:25px;
+.date{
+  color:#333;
+  font-size:14px;
+  margin:4px 0;
+}
+
+.headline-link{
+  display:block;
+  background:#d90000 !important;
+  color:white !important;
   text-align:center;
-  box-shadow:0 3px 15px rgba(0,0,0,.10);
+  margin-top:9px !important;
+}
+
+/* CONTACT */
+.contact{
+  margin-top:16px;
+  background:rgba(255,255,255,.93);
+  padding:17px;
+  border-radius:14px;
+  text-align:center;
 }
 
 .contact a{
   display:block;
+  margin:8px;
+  color:#0754ad;
   text-decoration:none;
-  color:#164aa0;
   font-weight:bold;
-  margin:11px 0;
 }
 
+/* FOOTER */
 footer{
   text-align:center;
-  padding:25px 10px;
-  color:#666;
-  font-size:14px;
+  padding:18px;
+  font-size:13px;
+  color:#444;
 }
 
-@media(max-width:600px){
-  header h1{
-    font-size:28px;
+/* MOBILE */
+@media(max-width:500px){
+
+  .folder{
+    min-height:58px;
   }
 
-  .folder-title{
-    font-size:17px;
+  .folder span{
+    font-size:14px;
+  }
+
+  header h1{
+    font-size:27px;
   }
 }
 </style>
@@ -157,117 +228,263 @@ footer{
 
 <div class="welcome">
   <h2>Welcome to Maha Shiv</h2>
-  <p>
-    तुमच्यासाठी सरकारी नोकरी, निकाल, शिक्षण,
-    परीक्षा आणि Latest Updates एकाच ठिकाणी.
-  </p>
+  <p>सरकारी नोकरी • निकाल • शिक्षण • नवीन अपडेट्स</p>
 </div>
 
 
-<!-- 1 सरकारी नोकरी -->
-<div class="folder">
-<button class="folder-title" onclick="toggleFolder(this)">
-💼 सरकारी नोकरी
-</button>
+<!-- HOME FOLDERS -->
 
-<div class="links">
+<div class="grid">
 
-<a class="headline" href="#" target="_blank">
-🔴 🔥 नवीन सरकारी नोकरी / Form / जाहिरात
+<div class="folder" onclick="openFolder('job')">
+<span>💼 सरकारी नोकरी</span>
+</div>
+
+<div class="folder" onclick="openFolder('result')">
+<span>📝 निकाल</span>
+</div>
+
+<div class="folder" onclick="openFolder('admit')">
+<span>🎫 Admit Card</span>
+</div>
+
+<div class="folder" onclick="openFolder('police')">
+<span>👮 पोलीस भरती</span>
+</div>
+
+<div class="folder" onclick="openFolder('school')">
+<span>🏫 शालेय शिक्षण</span>
+</div>
+
+<div class="folder" onclick="openFolder('teacher')">
+<span>👨‍🏫 शिक्षक</span>
+</div>
+
+<div class="folder" onclick="openFolder('dbt')">
+<span>🎓 MahaDBT</span>
+</div>
+
+<div class="folder" onclick="openFolder('college')">
+<span>🎓 महाविद्यालय</span>
+</div>
+
+<div class="folder" onclick="openFolder('updates')">
+<span>📢 Latest Updates</span>
+</div>
+
+<div class="folder" onclick="openFolder('gr')">
+<span>📜 सरकारी GR</span>
+</div>
+
+</div>
+
+
+<!-- सरकारी नोकरी -->
+
+<div id="job" class="content">
+
+<h2>💼 सरकारी नोकरी</h2>
+
+<div class="headline-box">
+
+<div class="headline-title">
+🔴 पोलीस शिपाई भरती 2026 — ऑनलाइन अर्ज
+</div>
+
+<div class="date">
+📅 Form सुरू: 10-08-2026
+</div>
+
+<div class="date">
+⏰ Form शेवटची तारीख: 30-08-2026
+</div>
+
+<a class="headline-link"
+href="https://www.mahapolice.gov.in/"
+target="_blank">
+1️⃣ 🔥 Apply / अधिकृत जाहिरात
 </a>
+
+</div>
 
 <a href="https://mpsc.gov.in/" target="_blank">🏛️ MPSC</a>
 <a href="https://upsc.gov.in/" target="_blank">🇮🇳 UPSC</a>
 <a href="https://ssc.gov.in/" target="_blank">🛡️ SSC</a>
-<a href="https://www.ibps.in/" target="_blank">🏦 IBPS / Banking</a>
+<a href="https://www.ibps.in/" target="_blank">🏦 IBPS</a>
 <a href="https://www.rrbapply.gov.in/" target="_blank">🚆 Railway</a>
 <a href="https://www.indiapost.gov.in/" target="_blank">📮 India Post</a>
-<a href="https://joinindianarmy.nic.in/" target="_blank">🪖 Indian Army</a>
-<a href="https://www.joinindiannavy.gov.in/" target="_blank">⚓ Indian Navy</a>
-<a href="https://agnipathvayu.cdac.in/" target="_blank">✈️ Air Force</a>
-<a href="https://www.ncs.gov.in/" target="_blank">💼 National Career Service</a>
+<a href="https://joinindianarmy.nic.in/" target="_blank">🪖 Army</a>
 
 </div>
+
+
+<!-- निकाल -->
+
+<div id="result" class="content">
+
+<h2>📝 निकाल</h2>
+
+<div class="headline-box">
+
+<div class="headline-title">
+🔴 SSC GD Constable 2026 — निकाल
 </div>
 
+<div class="date">
+📅 निकाल जाहीर: 14-08-2026
+</div>
 
-<!-- 2 निकाल -->
-<div class="folder">
-<button class="folder-title" onclick="toggleFolder(this)">
-📝 निकाल
-</button>
-
-<div class="links">
-
-<a class="headline" href="#" target="_blank">
-🔴 🔥 नवीन निकाल / Result
+<a class="headline-link"
+href="#"
+target="_blank">
+1️⃣ 🔥 निकाल पाहा
 </a>
 
-<a href="https://mahresult.nic.in/" target="_blank">📘 SSC / HSC Result</a>
-<a href="https://mpsc.gov.in/result_of_exam/11" target="_blank">🏛️ MPSC Result</a>
-<a href="https://upsc.gov.in/examinations/results" target="_blank">🇮🇳 UPSC Result</a>
-<a href="https://jeemain.nta.nic.in/" target="_blank">🎓 JEE Main</a>
-<a href="https://neet.nta.nic.in/" target="_blank">🩺 NEET</a>
-<a href="https://cuet.nta.nic.in/" target="_blank">🎓 CUET</a>
-<a href="https://cetcell.mahacet.org/" target="_blank">📚 MHT-CET</a>
-<a href="https://ugcnet.nta.nic.in/" target="_blank">🎓 UGC NET</a>
-<a href="https://ctet.nic.in/" target="_blank">📝 CTET</a>
-<a href="https://www.mahapolice.gov.in/" target="_blank">👮 Police Result</a>
-<a href="https://www.rrbapply.gov.in/" target="_blank">🚆 Railway Result</a>
-<a href="https://www.ibps.in/" target="_blank">🏦 Banking Result</a>
-
-</div>
 </div>
 
-
-<!-- 3 Admit Card -->
-<div class="folder">
-<button class="folder-title" onclick="toggleFolder(this)">
-🎫 Admit Card
-</button>
-
-<div class="links">
-
-<a class="headline" href="#" target="_blank">
-🔴 🔥 नवीन Admit Card उपलब्ध
+<a href="https://mahresult.nic.in/" target="_blank">
+📘 SSC / HSC Result
 </a>
+
+<a href="https://mpsc.gov.in/" target="_blank">
+🏛️ MPSC Result
+</a>
+
+<a href="https://upsc.gov.in/examinations/results" target="_blank">
+🇮🇳 UPSC Result
+</a>
+
+<a href="https://jeemain.nta.nic.in/" target="_blank">
+🎓 JEE Main Result
+</a>
+
+<a href="https://neet.nta.nic.in/" target="_blank">
+🩺 NEET Result
+</a>
+
+<a href="https://cetcell.mahacet.org/" target="_blank">
+📚 MHT-CET Result
+</a>
+
+</div>
+
+
+<!-- ADMIT CARD -->
+
+<div id="admit" class="content">
+
+<h2>🎫 Admit Card</h2>
+
+<div class="headline-box">
+
+<div class="headline-title">
+🔴 नवीन Admit Card उपलब्ध
+</div>
+
+<div class="date">
+📅 परीक्षा / Admit Card Date: 20-08-2026
+</div>
+
+<a class="headline-link"
+href="#"
+target="_blank">
+1️⃣ 🔥 Admit Card Download
+</a>
+
+</div>
 
 <a href="https://mpsc.gov.in/" target="_blank">🏛️ MPSC Admit Card</a>
 <a href="https://upsc.gov.in/" target="_blank">🇮🇳 UPSC Admit Card</a>
 <a href="https://ssc.gov.in/" target="_blank">🛡️ SSC Admit Card</a>
 <a href="https://www.rrbapply.gov.in/" target="_blank">🚆 Railway Admit Card</a>
-<a href="https://www.ibps.in/" target="_blank">🏦 IBPS Admit Card</a>
-<a href="https://jeemain.nta.nic.in/" target="_blank">🎓 JEE Main</a>
-<a href="https://neet.nta.nic.in/" target="_blank">🩺 NEET</a>
-<a href="https://ctet.nic.in/" target="_blank">📝 CTET</a>
-<a href="https://www.mahapolice.gov.in/" target="_blank">👮 Police Admit Card</a>
+<a href="https://ctet.nic.in/" target="_blank">📝 CTET Admit Card</a>
 
 </div>
+
+
+<!-- POLICE -->
+
+<div id="police" class="content">
+
+<h2>👮 पोलीस भरती</h2>
+
+<div class="headline-box">
+
+<div class="headline-title">
+🔴 महाराष्ट्र पोलीस शिपाई भरती 2026
 </div>
 
+<div class="date">
+📅 Form सुरू: 10-08-2026
+</div>
 
-<!-- 4 शालेय शिक्षण -->
-<div class="folder">
-<button class="folder-title" onclick="toggleFolder(this)">
-🏫 शालेय शिक्षण
-</button>
+<div class="date">
+⏰ Form शेवटची तारीख: 30-08-2026
+</div>
 
-<div class="links">
-
-<a class="headline" href="#" target="_blank">
-🔴 🔥 नवीन शालेय Form / Result / Update
+<a class="headline-link"
+href="https://www.mahapolice.gov.in/"
+target="_blank">
+1️⃣ 🔥 अधिकृत जाहिरात / Apply
 </a>
 
+</div>
+
+<a href="https://www.mahapolice.gov.in/" target="_blank">
+📢 महाराष्ट्र पोलीस
+</a>
+
+<a href="https://www.mahapolice.gov.in/" target="_blank">
+📋 भरती जाहिरात
+</a>
+
+<a href="https://www.mahapolice.gov.in/" target="_blank">
+🎫 Admit Card
+</a>
+
+<a href="https://www.mahapolice.gov.in/" target="_blank">
+🏆 Result
+</a>
+
+<a href="https://www.mahapolice.gov.in/" target="_blank">
+📋 Merit / Selection List
+</a>
+
+</div>
+
+
+<!-- SCHOOL -->
+
+<div id="school" class="content">
+
+<h2>🏫 शालेय शिक्षण</h2>
+
+<div class="headline-box">
+
+<div class="headline-title">
+🔴 नवीन शालेय शिक्षण Update
+</div>
+
+<div class="date">
+📅 Form सुरू: DD-MM-YYYY
+</div>
+
+<div class="date">
+⏰ शेवटची तारीख: DD-MM-YYYY
+</div>
+
+<a class="headline-link" href="#" target="_blank">
+1️⃣ 🔥 नवीन माहिती
+</a>
+
+</div>
+
 <a href="https://education.maharashtra.gov.in/" target="_blank">
-🏫 शालेय शिक्षण — 1 ली ते 12 वी
+🏫 1 ली ते 12 वी
 </a>
 
 <a href="https://mahadbt.maharashtra.gov.in/" target="_blank">
 🎓 Scholarship
-</a>
-
-<a href="https://exams.nta.nic.in/NVS/" target="_blank">
-🏫 नवोदय विद्यालय
 </a>
 
 <a href="https://mahahsscboard.in/" target="_blank">
@@ -278,90 +495,85 @@ footer{
 📝 HSC
 </a>
 
-</div>
-</div>
-
-
-<!-- 5 शिक्षक -->
-<div class="folder">
-<button class="folder-title" onclick="toggleFolder(this)">
-👨‍🏫 शिक्षक
-</button>
-
-<div class="links">
-
-<a class="headline" href="#" target="_blank">
-🔴 🔥 नवीन शिक्षक भरती / Form / Result
+<a href="https://exams.nta.nic.in/NVS/" target="_blank">
+🏫 नवोदय
 </a>
 
-<a href="https://www.mahatet.in/" target="_blank">📝 Maha TET</a>
-<a href="https://ctet.nic.in/" target="_blank">📝 CTET</a>
-<a href="https://www.taitexam.in/" target="_blank">📊 TAIT</a>
+</div>
+
+
+<!-- TEACHER -->
+
+<div id="teacher" class="content">
+
+<h2>👨‍🏫 शिक्षक</h2>
+
+<div class="headline-box">
+
+<div class="headline-title">
+🔴 नवीन शिक्षक भरती / जाहिरात
+</div>
+
+<div class="date">
+📅 Form सुरू: DD-MM-YYYY
+</div>
+
+<div class="date">
+⏰ Form शेवटची तारीख: DD-MM-YYYY
+</div>
+
+<a class="headline-link" href="#" target="_blank">
+1️⃣ 🔥 Apply / जाहिरात
+</a>
+
+</div>
+
+<a href="https://www.mahatet.in/" target="_blank">
+📝 Maha TET
+</a>
+
+<a href="https://ctet.nic.in/" target="_blank">
+📝 CTET
+</a>
+
+<a href="https://www.taitexam.in/" target="_blank">
+📊 TAIT
+</a>
+
 <a href="https://www.mahateacherrecruitment.org.in/" target="_blank">
 👨‍🏫 शिक्षक भरती
 </a>
-<a href="https://www.mahaportal.org/" target="_blank">
-📋 Pavitra Portal
-</a>
-<a href="https://www.mahaonline.gov.in/" target="_blank">
-📢 शिक्षक Updates
+
+</div>
+
+
+<!-- DBT -->
+
+<div id="dbt" class="content">
+
+<h2>🎓 MahaDBT</h2>
+
+<div class="headline-box">
+
+<div class="headline-title">
+🔴 नवीन Scholarship / DBT Form
+</div>
+
+<div class="date">
+📅 Form सुरू: DD-MM-YYYY
+</div>
+
+<div class="date">
+⏰ Form शेवटची तारीख: DD-MM-YYYY
+</div>
+
+<a class="headline-link"
+href="https://mahadbt.maharashtra.gov.in/"
+target="_blank">
+1️⃣ 🔥 Apply / MahaDBT
 </a>
 
 </div>
-</div>
-
-
-<!-- 6 पोलीस भरती -->
-<div class="folder">
-<button class="folder-title" onclick="toggleFolder(this)">
-👮 पोलीस भरती
-</button>
-
-<div class="links">
-
-<a class="headline" href="#" target="_blank">
-🔴 🔥 नवीन पोलीस भरती जाहिरात / Form
-</a>
-
-<a href="https://www.mahapolice.gov.in/" target="_blank">
-📢 महाराष्ट्र पोलीस
-</a>
-
-<a href="https://www.mahapolice.gov.in/police-recruitment" target="_blank">
-📢 पोलीस भरती जाहिरात
-</a>
-
-<a href="https://policerecruitment2025.mahait.org/" target="_blank">
-📝 Online Form
-</a>
-
-<a href="https://www.mahapolice.gov.in/police-recruitment" target="_blank">
-🎫 Admit Card
-</a>
-
-<a href="https://www.mahapolice.gov.in/police-recruitment" target="_blank">
-🏆 Result
-</a>
-
-<a href="https://www.mahapolice.gov.in/police-recruitment" target="_blank">
-📋 Merit / Selection List
-</a>
-
-</div>
-</div>
-
-
-<!-- 7 MahaDBT -->
-<div class="folder">
-<button class="folder-title" onclick="toggleFolder(this)">
-🎓 MahaDBT
-</button>
-
-<div class="links">
-
-<a class="headline" href="https://mahadbt.maharashtra.gov.in/" target="_blank">
-🔴 🔥 नवीन DBT / Scholarship Form / Update
-</a>
 
 <a href="https://mahadbt.maharashtra.gov.in/" target="_blank">
 🏠 Hostel DBT
@@ -384,39 +596,42 @@ footer{
 </a>
 
 <a href="https://mahadbt.maharashtra.gov.in/" target="_blank">
-💳 Payment / Transaction Status
-</a>
-
-<a href="https://mahadbt.maharashtra.gov.in/" target="_blank">
-❓ Help / FAQ
+💳 Payment Status
 </a>
 
 </div>
+
+
+<!-- COLLEGE -->
+
+<div id="college" class="content">
+
+<h2>🎓 महाविद्यालय</h2>
+
+<div class="headline-box">
+
+<div class="headline-title">
+🔴 नवीन College Admission Form
 </div>
 
+<div class="date">
+📅 Form सुरू: DD-MM-YYYY
+</div>
 
-<!-- 8 महाविद्यालय -->
-<div class="folder">
-<button class="folder-title" onclick="toggleFolder(this)">
-🎓 महाविद्यालय
-</button>
+<div class="date">
+⏰ Form शेवटची तारीख: DD-MM-YYYY
+</div>
 
-<div class="links">
-
-<a class="headline" href="https://cetcell.mahacet.org/" target="_blank">
-🔴 🔥 नवीन College Form / Admission / Result
+<a class="headline-link"
+href="https://cetcell.mahacet.org/"
+target="_blank">
+1️⃣ 🔥 Admission / अधिकृत लिंक
 </a>
+
+</div>
 
 <a href="https://cetcell.mahacet.org/" target="_blank">
 🏛️ Maharashtra CET Cell
-</a>
-
-<a href="https://cetcell.mahacet.org/" target="_blank">
-📝 College Admission / CAP
-</a>
-
-<a href="https://cetcell.mahacet.org/" target="_blank">
-🎓 MHT-CET
 </a>
 
 <a href="https://cetcell.mahacet.org/" target="_blank">
@@ -452,11 +667,7 @@ footer{
 </a>
 
 <a href="https://cetcell.mahacet.org/" target="_blank">
-📊 BBA
-</a>
-
-<a href="https://cetcell.mahacet.org/" target="_blank">
-🏢 BMS
+📊 BBA / BMS
 </a>
 
 <a href="https://cetcell.mahacet.org/" target="_blank">
@@ -464,19 +675,7 @@ footer{
 </a>
 
 <a href="https://cetcell.mahacet.org/" target="_blank">
-💼 M.Com
-</a>
-
-<a href="https://cetcell.mahacet.org/" target="_blank">
 ⚙️ B.E. / B.Tech
-</a>
-
-<a href="https://cetcell.mahacet.org/" target="_blank">
-🏥 Medical / NEET Admission
-</a>
-
-<a href="https://cetcell.mahacet.org/" target="_blank">
-💊 B.Pharm
 </a>
 
 <a href="https://cetcell.mahacet.org/" target="_blank">
@@ -484,35 +683,40 @@ footer{
 </a>
 
 <a href="https://cetcell.mahacet.org/" target="_blank">
-🌾 Agriculture
+💊 B.Pharm
 </a>
 
 <a href="https://cetcell.mahacet.org/" target="_blank">
 🏨 Nursing
 </a>
 
-<a href="https://www.ugc.gov.in/" target="_blank">
-🔎 UGC
-</a>
-
-</div>
 </div>
 
 
-<!-- 9 Latest Updates -->
-<div class="folder">
-<button class="folder-title" onclick="toggleFolder(this)">
-📢 Latest Updates
-</button>
+<!-- UPDATES -->
 
-<div class="links">
+<div id="updates" class="content">
 
-<a class="headline" href="#" target="_blank">
-🔴 🔥 नवीन Latest Update
+<h2>📢 Latest Updates</h2>
+
+<div class="headline-box">
+
+<div class="headline-title">
+🔴 नवीन Latest Update
+</div>
+
+<div class="date">
+📅 Update Date: DD-MM-YYYY
+</div>
+
+<a class="headline-link" href="#" target="_blank">
+1️⃣ 🔥 पूर्ण माहिती
 </a>
+
+</div>
 
 <a href="https://www.maharashtra.gov.in/" target="_blank">
-📰 Maharashtra Government Updates
+📰 Maharashtra Government
 </a>
 
 <a href="https://www.mahapolice.gov.in/" target="_blank">
@@ -523,29 +727,32 @@ footer{
 🏛️ MPSC Updates
 </a>
 
-<a href="https://www.mahresult.nic.in/" target="_blank">
-📝 Result Updates
-</a>
-
-<a href="https://mahadbt.maharashtra.gov.in/" target="_blank">
-🎓 Scholarship Updates
-</a>
-
-</div>
 </div>
 
 
-<!-- 10 सरकारी GR -->
-<div class="folder">
-<button class="folder-title" onclick="toggleFolder(this)">
-📜 सरकारी GR
-</button>
+<!-- GR -->
 
-<div class="links">
+<div id="gr" class="content">
 
-<a class="headline" href="#" target="_blank">
-🔴 🔥 नवीन सरकारी GR / शासन निर्णय
+<h2>📜 सरकारी GR</h2>
+
+<div class="headline-box">
+
+<div class="headline-title">
+🔴 नवीन सरकारी GR / शासन निर्णय
+</div>
+
+<div class="date">
+📅 GR Date: DD-MM-YYYY
+</div>
+
+<a class="headline-link"
+href="https://gr.maharashtra.gov.in/"
+target="_blank">
+1️⃣ 🔥 GR पाहा
 </a>
+
+</div>
 
 <a href="https://gr.maharashtra.gov.in/" target="_blank">
 📄 महाराष्ट्र शासन GR
@@ -563,29 +770,17 @@ footer{
 🏘️ ग्रामविकास GR
 </a>
 
-<a href="https://finance.maharashtra.gov.in/" target="_blank">
-💰 वित्त विभाग
-</a>
-
-<a href="https://arogya.maharashtra.gov.in/" target="_blank">
-🏥 आरोग्य विभाग
-</a>
-
-<a href="https://home.maharashtra.gov.in/" target="_blank">
-👮 गृह विभाग
-</a>
-
-</div>
 </div>
 
 
-<!-- 11 Contact -->
+<!-- CONTACT -->
+
 <div class="contact">
 
-<h2>📞 Contact Us</h2>
+<h2>📞 Contact</h2>
 
 <a href="tel:8408088784">
-📞 Call: 8408088784
+📞 8408088784
 </a>
 
 <a href="https://wa.me/918408088784" target="_blank">
@@ -593,37 +788,32 @@ footer{
 </a>
 
 <a href="mailto:shivshankarphupate@gmail.com">
-📧 Email: shivshankarphupate@gmail.com
+📧 shivshankarphupate@gmail.com
 </a>
 
 </div>
 
 </div>
 
-
 <footer>
-© 2026 Maha Shiv | Education • Jobs • Results • Latest Updates
+© 2026 Maha Shiv
 </footer>
 
 
 <script>
 
-function toggleFolder(button){
+function openFolder(id){
 
-  const links = button.nextElementSibling;
+  document.querySelectorAll(".content").forEach(function(item){
+    item.classList.remove("active");
+  });
 
-  if(links.style.display === "block"){
-    links.style.display = "none";
-  }
-  else{
+  document.getElementById(id).classList.add("active");
 
-    document.querySelectorAll(".links").forEach(function(item){
-      item.style.display = "none";
-    });
-
-    links.style.display = "block";
-  }
-
+  document.getElementById(id).scrollIntoView({
+    behavior:"smooth",
+    block:"start"
+  });
 }
 
 </script>
